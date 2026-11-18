@@ -6,12 +6,18 @@
 
 ```text
 .
+├─ assets/
+│  ├─ report.css
+│  └─ report.js
 ├─ index.html
 ├─ .nojekyll
 └─ reports/
-   └─ 2026-11-12/
-      └─ index.html
+   └─ YYYY-MM-DD/
+      ├─ index.html
+      └─ data.json
 ```
+
+`assets/` 是所有新报告共用的模板样式和渲染逻辑；每个日期目录只保存通用页面入口与当日数据。修改模板后，所有采用新结构的报告会同时生效。
 
 ## GitHub Pages 设置
 
@@ -27,16 +33,22 @@
 
 ## 添加新报告
 
-在本地 `C:\wow-turtle` 中放入：
+先生成当日的展示数据：
 
-```text
-karazhan-tower-YYYY-MM-DD.html
+```powershell
+python render_karazhan_canvas.py karazhan_YYYYMMDD_analysis.json
 ```
 
-然后运行：
+脚本会在 `C:\wow-turtle` 生成：
+
+```text
+karazhan-tower-YYYY-MM-DD.data.json
+```
+
+再运行：
 
 ```powershell
 python build_report_site.py
 ```
 
-脚本会重新生成本目录的日期列表，并把报告放入对应日期目录。之后将本目录的变更上传到 GitHub 即可。
+脚本会复用公共模板、复制当日数据并更新日期列表。`2026-11-12` 是迁移前的旧版静态页面，后续报告使用数据与模板分离结构。
