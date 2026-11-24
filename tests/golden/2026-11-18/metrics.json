@@ -3,7 +3,7 @@
   "date": "2026-11-18",
   "raid_start": "19:24:07.050",
   "raid_end": "20:55:10.466",
-  "roster_size": 41,
+  "roster_size": 40,
   "roster": [
     "Aayaa",
     "Pampas",
@@ -15,7 +15,6 @@
     "丨雷克萨斯丨",
     "仲烛祈世",
     "凶甚",
-    "剧本还可以",
     "吊州女王",
     "名丨将",
     "唯青",
@@ -48,7 +47,7 @@
     "黑星盗"
   ],
   "role_counts": {
-    "物理近战": 13,
+    "物理近战": 12,
     "治疗": 11,
     "坦克": 5,
     "物理远程": 2,
@@ -103,11 +102,6 @@
     {
       "name": "凶甚",
       "class": "萨满",
-      "role": "物理近战"
-    },
-    {
-      "name": "剧本还可以",
-      "class": "战士",
       "role": "物理近战"
     },
     {
@@ -262,16 +256,16 @@
     }
   ],
   "dps": {
-    "active_combat_time": 3104.623,
+    "active_combat_time": 3104.577,
     "elapsed_time": 5463.416,
-    "player_count": 40,
+    "player_count": 39,
     "players": [
       {
         "name": "妖肆贰",
         "class": "盗贼",
         "group": "物理",
         "damage": 3768815,
-        "dps": 1213.9
+        "dps": 1214.0
       },
       {
         "name": "丨雷克萨斯丨",
@@ -376,7 +370,7 @@
         "class": "平衡德",
         "group": "法系",
         "damage": 2469560,
-        "dps": 795.4
+        "dps": 795.5
       },
       {
         "name": "吊州女王",
@@ -397,7 +391,7 @@
         "class": "战士",
         "group": "物理",
         "damage": 2252864,
-        "dps": 725.6
+        "dps": 725.7
       },
       {
         "name": "靡不有初",
@@ -461,13 +455,6 @@
         "group": "物理",
         "damage": 396325,
         "dps": 127.7
-      },
-      {
-        "name": "剧本还可以",
-        "class": "战士",
-        "group": "物理",
-        "damage": 278333,
-        "dps": 89.7
       },
       {
         "name": "我爱大油桃",
@@ -684,44 +671,6 @@
       ]
     },
     {
-      "player": "我爱大油桃",
-      "count": 17,
-      "details": [
-        {
-          "issue": "团队Buff·强效庇护祝福断档",
-          "count": 10
-        },
-        {
-          "issue": "国王（国际象棋）·死于国王之怒",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少火炕",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
-          "count": 1
-        },
-        {
-          "issue": "消耗品·梦境精华药剂到期未及时补",
-          "count": 1
-        },
-        {
-          "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-          "count": 1
-        },
-        {
-          "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
-          "count": 1
-        }
-      ]
-    },
-    {
       "player": "Pampas",
       "count": 15,
       "details": [
@@ -810,63 +759,27 @@
       ]
     },
     {
-      "player": "黑星盗",
+      "player": "我爱大油桃",
       "count": 15,
       "details": [
         {
-          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+          "issue": "团队Buff·强效庇护祝福断档",
+          "count": 10
+        },
+        {
+          "issue": "国王（国际象棋）·死于国王之怒",
           "count": 1
         },
         {
-          "issue": "国王（国际象棋）·首次心控未及时自解",
+          "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
           "count": 1
         },
         {
-          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+          "issue": "消耗品·梦境精华药剂到期未及时补",
           "count": 1
         },
         {
-          "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少火炕",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-          "count": 1
-        },
-        {
-          "issue": "库鲁尔·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "库鲁尔·第一阶段非T攻击地狱火",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·大怪成功变身",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "消耗品·猫鼬药剂到期未及时补",
-          "count": 1
-        },
-        {
-          "issue": "阿诺玛鲁斯·奥术超载炸到大团",
+          "issue": "阿诺玛鲁斯·开打未吃奥术防护",
           "count": 1
         },
         {
@@ -925,6 +838,68 @@
         },
         {
           "issue": "阿诺玛鲁斯·开打未吃奥术防护",
+          "count": 1
+        },
+        {
+          "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "player": "黑星盗",
+      "count": 14,
+      "details": [
+        {
+          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+          "count": 1
+        },
+        {
+          "issue": "国王（国际象棋）·首次心控未及时自解",
+          "count": 1
+        },
+        {
+          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+          "count": 1
+        },
+        {
+          "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打缺少火炕",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+          "count": 1
+        },
+        {
+          "issue": "库鲁尔·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "库鲁尔·第一阶段非T攻击地狱火",
+          "count": 1
+        },
+        {
+          "issue": "桑夫·塔斯达尔·大怪成功变身",
+          "count": 1
+        },
+        {
+          "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "消耗品·猫鼬药剂到期未及时补",
           "count": 1
         },
         {
@@ -1014,44 +989,6 @@
       ]
     },
     {
-      "player": "进击的喵叽",
-      "count": 12,
-      "details": [
-        {
-          "issue": "团队Buff·强效王者祝福断档",
-          "count": 5
-        },
-        {
-          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-          "count": 1
-        },
-        {
-          "issue": "国王（国际象棋）·首次心控未及时自解",
-          "count": 1
-        },
-        {
-          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少火炕",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·大怪成功变身",
-          "count": 1
-        },
-        {
-          "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
-          "count": 1
-        }
-      ]
-    },
-    {
       "player": "野生小耀西",
       "count": 12,
       "details": [
@@ -1094,78 +1031,6 @@
       ]
     },
     {
-      "player": "万恶的右手",
-      "count": 11,
-      "details": [
-        {
-          "issue": "团队Buff·强效拯救祝福断档",
-          "count": 7
-        },
-        {
-          "issue": "消耗品·梦境火酒药剂到期未及时补",
-          "count": 2
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "消耗品·奥法药剂到期未及时补",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "player": "剧本还可以",
-      "count": 11,
-      "details": [
-        {
-          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-          "count": 1
-        },
-        {
-          "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打缺少火炕",
-          "count": 1
-        },
-        {
-          "issue": "库鲁尔·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·大怪成功变身",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-          "count": 1
-        },
-        {
-          "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
-          "count": 1
-        },
-        {
-          "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
-          "count": 1
-        }
-      ]
-    },
-    {
       "player": "绍依古",
       "count": 11,
       "details": [
@@ -1195,6 +1060,66 @@
         },
         {
           "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "player": "进击的喵叽",
+      "count": 11,
+      "details": [
+        {
+          "issue": "团队Buff·强效王者祝福断档",
+          "count": 4
+        },
+        {
+          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+          "count": 1
+        },
+        {
+          "issue": "国王（国际象棋）·首次心控未及时自解",
+          "count": 1
+        },
+        {
+          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打缺少火炕",
+          "count": 1
+        },
+        {
+          "issue": "桑夫·塔斯达尔·大怪成功变身",
+          "count": 1
+        },
+        {
+          "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "player": "万恶的右手",
+      "count": 10,
+      "details": [
+        {
+          "issue": "团队Buff·强效拯救祝福断档",
+          "count": 6
+        },
+        {
+          "issue": "消耗品·梦境火酒药剂到期未及时补",
+          "count": 2
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+          "count": 1
+        },
+        {
+          "issue": "消耗品·奥法药剂到期未及时补",
           "count": 1
         }
       ]
@@ -1450,40 +1375,6 @@
       ]
     },
     {
-      "player": "Aayaa",
-      "count": 8,
-      "details": [
-        {
-          "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
-          "count": 2
-        },
-        {
-          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-          "count": 1
-        },
-        {
-          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-          "count": 1
-        },
-        {
-          "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-          "count": 1
-        },
-        {
-          "issue": "桑夫·塔斯达尔·大怪成功变身",
-          "count": 1
-        },
-        {
-          "issue": "阿诺玛鲁斯·奥术超载炸到大团",
-          "count": 1
-        }
-      ]
-    },
-    {
       "player": "仲烛祈世",
       "count": 8,
       "details": [
@@ -1587,6 +1478,36 @@
         },
         {
           "issue": "守护者纳尔穆恩·开打缺少火炕",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "player": "Aayaa",
+      "count": 7,
+      "details": [
+        {
+          "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
+          "count": 2
+        },
+        {
+          "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+          "count": 1
+        },
+        {
+          "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+          "count": 1
+        },
+        {
+          "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+          "count": 1
+        },
+        {
+          "issue": "桑夫·塔斯达尔·大怪成功变身",
           "count": 1
         }
       ]
@@ -1734,28 +1655,6 @@
       ]
     },
     {
-      "player": "御剑乗风来",
-      "count": 4,
-      "details": [
-        {
-          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-          "count": 1
-        },
-        {
-          "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-          "count": 1
-        },
-        {
-          "issue": "库鲁尔·未接手导致冷漠打击达到7层",
-          "count": 1
-        },
-        {
-          "issue": "阿诺玛鲁斯·奥术超载炸到大团",
-          "count": 1
-        }
-      ]
-    },
-    {
       "player": "晓艸",
       "count": 4,
       "details": [
@@ -1773,6 +1672,24 @@
         },
         {
           "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "player": "御剑乗风来",
+      "count": 3,
+      "details": [
+        {
+          "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+          "count": 1
+        },
+        {
+          "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+          "count": 1
+        },
+        {
+          "issue": "库鲁尔·未接手导致冷漠打击达到7层",
           "count": 1
         }
       ]
@@ -1898,7 +1815,6 @@
         "Tbug",
         "丨雷克萨斯丨",
         "凶甚",
-        "剧本还可以",
         "壹個獵人",
         "妖肆贰",
         "拂了一身还满",
@@ -2030,34 +1946,34 @@
   "bosses": [
     {
       "boss": "守护者纳尔穆恩",
-      "sha256": "e2c76aa93870ae1ba54b072c7e8c207380c9b0de508a0001f0f76be84252a810",
+      "sha256": "0ecdb3aa638293a39f34e54e6b54c98f288bebb751360dfc937b0354e7d20207",
       "preparation": [
         {
           "item": "火炕",
           "status": "有问题",
-          "missing_count": 25
+          "missing_count": 23
         },
         {
           "item": "冰冻符文",
           "status": "有问题",
-          "missing_count": 37
+          "missing_count": 35
         }
       ]
     },
     {
       "boss": "魔网观察者因塔苟斯",
-      "sha256": "03c08c24327fb1e67b8d7033dd1bbad3d52d2ae73e94b356c1ba716ccd247698",
+      "sha256": "14ff3656526d5c266d169c98d925d9b131a16c94e7a43ff51780379ee62abde4",
       "preparation": [
         {
           "item": "冰抗",
           "status": "有问题",
-          "missing_count": 13
+          "missing_count": 12
         }
       ]
     },
     {
       "boss": "阿诺玛鲁斯",
-      "sha256": "9dcbc667c1eab751682bdca5fa94bd6be16c36133378e82057770188ff293039",
+      "sha256": "76ef3cd6e3d8ea8105862bcc5b1d740c9a15c5595fc0555138402aaf0a9ce88e",
       "preparation": []
     },
     {
@@ -2067,12 +1983,12 @@
     },
     {
       "boss": "国王（国际象棋）",
-      "sha256": "23bc59bcbf4b0cdcfe7fe6921a732aab898ed67907253fc358b1da683adc612b",
+      "sha256": "6c8665f69878085b950923a9fc95de9582f35f7875d0e0692605c8ec2dcff4df",
       "preparation": []
     },
     {
       "boss": "桑夫·塔斯达尔",
-      "sha256": "90855f415b193ac22e8ec73edaf733e6e92ab9fa9c35ce6ecc3524d159f9086b",
+      "sha256": "d0b02781ab87b4a2451b28bbd1b0df3ce907950c1a30bd3953f25bd4de323f39",
       "preparation": []
     },
     {
@@ -2185,19 +2101,19 @@
           "curse": "暗影诅咒",
           "responsible": "吊州女王",
           "is_error": false,
-          "uptime_pct": 182.6
+          "uptime_pct": 92.6
         },
         {
           "curse": "语言诅咒",
           "responsible": "罗坊",
           "is_error": false,
-          "uptime_pct": 142.2
+          "uptime_pct": 95.2
         },
         {
           "curse": "鲁莽诅咒",
           "responsible": "靡不有初",
           "is_error": true,
-          "uptime_pct": 243.2
+          "uptime_pct": 96.4
         }
       ]
     },
@@ -2277,15 +2193,15 @@
     }
   ],
   "section_sha256": {
-    "roles": "f3aff5229a088f4d3db51df26f676416d5e4c5754700e87b70ab12d8ea814c02",
-    "dps": "788c76419fe1e50a0ca01a1333a95bd203a3df6163fe8eea484a09beff2173c3",
-    "buffs": "1caa29cee3da7551fe3f84d4dd54c507f35147a3eff0a72a5e405f81dda00e5e",
-    "buff_coverage": "19f8ce3c92e920e356a1f9d4aea30a417d989c7af33f6b10e2f24203a11fb730",
+    "roles": "b9bc6001fc74fce0dfa2618ae9ba801c6d578634e7fe97b4f5346f97a5727ab1",
+    "dps": "b197160811f20dd287f1e87e467e79b0b6b3a4de9c3034f6f5351298448c625a",
+    "buffs": "f035c3ff3bac15722580a8925fb21d88876cd0dd31195399f31508396d6adfb3",
+    "buff_coverage": "da18f248c38b7f00fcce0d65a15e0674782aa0b7640f77162793b86b71a1f9ab",
     "windfury_coverage": "c94f798fed277f3c826a11a2854c05e0a8a3a6c83bb913f61b55c2e0cf98edb3",
-    "curses": "494311fc6261867a1708952fb8a2801ad083ab768f3bb441fada8b3f5382897a",
+    "curses": "fc3e8e7f7a0203ecd9dbacb4d11827b149377ffdc1f7d0f8e4d0f64529b74a47",
     "dispel_candidates": "61dd4ac3c0aa362dc9cbe0f2b2c4e87bac5b9633c3c4d9d6b6caafbc224c7955",
-    "consumables": "5f2872a90b773e60178dc93e392559a77d9cee86f138c84b47e6d79df7c1613b",
-    "boss_analysis": "0702b1e664ab3e04487504372c691f4180ffd1b9ecd5f213070782850982a1a2",
-    "error_summary": "46437d68ef699e3f47f9ca8823b9bb511d3d7fe868ff13c5b4355820dd56e292"
+    "consumables": "90a3c81a07b89d0d380b0716c5303e110953eecf0aad6fb3a7ed896596b43a08",
+    "boss_analysis": "39e9bb2ff56c6009e75fb822bf51c25e8f68c106a773fda4bc1d3c7c535c347c",
+    "error_summary": "7778935ef7dd763fe11a80847078372ae12ea570bd76078265dad657ee8dd632"
   }
 }

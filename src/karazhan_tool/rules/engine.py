@@ -106,6 +106,12 @@ def left_at(player):
     return span[1] if span else seconds(RAID_END)
 
 
+def joined_at(player):
+    """玩家首条记录时间；没有记录时视为全程在场。"""
+    span = PRESENCE.get(player)
+    return span[0] if span else seconds(RAID_START)
+
+
 def present_in(player, boss):
     attempts = ATTEMPTS.get(boss)
     if not attempts or player not in PRESENCE:
@@ -1081,10 +1087,15 @@ def analyze_buff_coverage(buff_summaries, parsed_damage, roster, roles):
           if seconds(item["loss"]) < seconds(RAID_END) - BUFF_GAP_THRESHOLD)
         for issue in issues:
             player = issue["player"]
+            providers = list(summary.get("assigned_providers", []))
+            gap_start = seconds(issue["loss"])
             gap_end = min(seconds(issue["gain"]), left_at(player))
-            combat_duration = combat_overlap_duration(
-                seconds(issue["loss"]), gap_end, windows
-            )
+            if providers:
+                gap_start = max(gap_start, min(joined_at(p) for p in providers))
+                gap_end = min(gap_end, max(left_at(p) for p in providers))
+            if gap_end <= gap_start:
+                continue
+            combat_duration = combat_overlap_duration(gap_start, gap_end, windows)
             if combat_duration <= BUFF_GAP_THRESHOLD:
                 continue
             player_class = PLAYER_CLASSES.get(player, "未识别职业")
@@ -1110,8 +1121,8 @@ def analyze_buff_coverage(buff_summaries, parsed_damage, roster, roles):
                 "buff": summary["buff"],
                 "mode": mode,
                 "unit": unit,
-                "responsible": list(summary.get("assigned_providers", [])),
-                "start": seconds(issue["loss"]),
+                "responsible": providers,
+                "start": gap_start,
                 "end": gap_end,
                 "combat_duration": combat_duration,
                 "affected": {player},

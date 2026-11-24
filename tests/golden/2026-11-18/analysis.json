@@ -4,7 +4,7 @@
     "date": "2026-11-18",
     "raid_start": "19:24:07.050",
     "raid_end": "20:55:10.466",
-    "roster_size": 41,
+    "roster_size": 40,
     "roster": [
       "Aayaa",
       "Pampas",
@@ -16,7 +16,6 @@
       "丨雷克萨斯丨",
       "仲烛祈世",
       "凶甚",
-      "剧本还可以",
       "吊州女王",
       "名丨将",
       "唯青",
@@ -352,39 +351,6 @@
         [
           "闪电打击",
           295
-        ]
-      ]
-    },
-    {
-      "name": "剧本还可以",
-      "class": "战士",
-      "role": "物理近战",
-      "healing_actions": 0,
-      "healing": 0,
-      "damage_actions": 333,
-      "tank_actions": 0,
-      "hunter_melee_damage": null,
-      "hunter_ranged_damage": null,
-      "evidence": [
-        [
-          "火舌攻击",
-          89
-        ],
-        [
-          "重伤",
-          60
-        ],
-        [
-          "旋风斩",
-          51
-        ],
-        [
-          "近战",
-          44
-        ],
-        [
-          "横扫攻击",
-          30
         ]
       ]
     },
@@ -1275,7 +1241,7 @@
     "scope_start": "19:24:07.050",
     "scope_end": "20:55:10.466",
     "elapsed_time": 5463.416,
-    "active_combat_time": 3104.623,
+    "active_combat_time": 3104.577,
     "combat_windows": [
       {
         "start": 69847.846,
@@ -1289,8 +1255,8 @@
       },
       {
         "start": 69979.328,
-        "end": 70073.162,
-        "duration": 93.834
+        "end": 70073.116,
+        "duration": 93.788
       },
       {
         "start": 70085.377,
@@ -1494,7 +1460,7 @@
         "class": "盗贼",
         "group": "物理",
         "damage": 3768815,
-        "dps": 1213.9,
+        "dps": 1214.0,
         "top_skills": [
           [
             "近战",
@@ -2196,7 +2162,7 @@
         "class": "平衡德",
         "group": "法系",
         "damage": 2469560,
-        "dps": 795.4,
+        "dps": 795.5,
         "top_skills": [
           [
             "愤怒",
@@ -2331,7 +2297,7 @@
         "class": "战士",
         "group": "物理",
         "damage": 2252864,
-        "dps": 725.6,
+        "dps": 725.7,
         "top_skills": [
           [
             "近战",
@@ -2789,51 +2755,6 @@
           "火焰": 18925,
           "物理": 110166,
           "神圣": 267234
-        }
-      },
-      {
-        "name": "剧本还可以",
-        "class": "战士",
-        "group": "物理",
-        "damage": 278333,
-        "dps": 89.7,
-        "top_skills": [
-          [
-            "旋风斩",
-            65514
-          ],
-          [
-            "近战",
-            55969
-          ],
-          [
-            "横扫攻击",
-            44648
-          ],
-          [
-            "斩杀",
-            33137
-          ],
-          [
-            "顺劈斩",
-            27590
-          ],
-          [
-            "猛击",
-            21377
-          ],
-          [
-            "重伤",
-            14803
-          ],
-          [
-            "英勇打击",
-            12122
-          ]
-        ],
-        "schools": {
-          "物理": 275247,
-          "火焰": 3086
         }
       },
       {
@@ -10940,11 +10861,11 @@
       "buff": "奥术智慧/奥术光辉",
       "explicit_sources": [],
       "provider_candidates": [
-        "洛珂珂",
-        "野生小耀西",
-        "绍依古",
+        "仲烛祈世",
         "唯青",
-        "仲烛祈世"
+        "洛珂珂",
+        "绍依古",
+        "野生小耀西"
       ],
       "assigned_providers": [],
       "paladin_blessing_assignments": {},
@@ -11367,15 +11288,15 @@
       "buff": "强击光环",
       "explicit_sources": [],
       "provider_candidates": [
-        "壹個獵人",
+        "丨小辫子丨",
         "丨雷克萨斯丨",
-        "大辫子啤酒",
-        "丨小辫子丨"
+        "壹個獵人",
+        "大辫子啤酒"
       ],
       "assigned_providers": [],
       "paladin_blessing_assignments": {},
       "provider_skill_counts": {},
-      "losses": 417,
+      "losses": 416,
       "rebuffed": 399,
       "median_delay": 11.08,
       "max_delay": 4028.0,
@@ -12004,11 +11925,6 @@
           "line": 403480
         },
         {
-          "player": "剧本还可以",
-          "loss": "19:29:00.874",
-          "line": 32127
-        },
-        {
           "player": "Tbug",
           "loss": "20:52:53.072",
           "line": 431827
@@ -12089,11 +12005,11 @@
       "buff": "强效力量祝福",
       "explicit_sources": [],
       "provider_candidates": [
-        "进击的喵叽",
+        "Pampas",
         "万恶的右手",
-        "湘江之畔",
         "我爱大油桃",
-        "Pampas"
+        "湘江之畔",
+        "进击的喵叽"
       ],
       "assigned_providers": [
         "Pampas"
@@ -12152,7 +12068,7 @@
         }
       },
       "provider_skill_counts": {},
-      "losses": 35,
+      "losses": 34,
       "rebuffed": 33,
       "median_delay": 0.0,
       "max_delay": 1415.9,
@@ -12274,11 +12190,6 @@
       ],
       "not_rebuffed": [
         {
-          "player": "剧本还可以",
-          "loss": "19:28:59.398",
-          "line": 32116
-        },
-        {
           "player": "大辫子啤酒",
           "loss": "20:54:04.637",
           "line": 438914
@@ -12289,11 +12200,11 @@
       "buff": "强效庇护祝福",
       "explicit_sources": [],
       "provider_candidates": [
-        "进击的喵叽",
+        "Pampas",
         "万恶的右手",
-        "湘江之畔",
         "我爱大油桃",
-        "Pampas"
+        "湘江之畔",
+        "进击的喵叽"
       ],
       "assigned_providers": [
         "我爱大油桃"
@@ -12352,7 +12263,7 @@
         }
       },
       "provider_skill_counts": {},
-      "losses": 41,
+      "losses": 40,
       "rebuffed": 20,
       "median_delay": 3516.7,
       "max_delay": 4494.97,
@@ -12501,11 +12412,6 @@
       "boss_slow_rebuffs": [],
       "not_rebuffed": [
         {
-          "player": "剧本还可以",
-          "loss": "19:24:30.004",
-          "line": 3946
-        },
-        {
           "player": "蝶野雏",
           "loss": "20:24:11.263",
           "line": 304892
@@ -12611,11 +12517,11 @@
       "buff": "强效拯救祝福",
       "explicit_sources": [],
       "provider_candidates": [
-        "进击的喵叽",
+        "Pampas",
         "万恶的右手",
-        "湘江之畔",
         "我爱大油桃",
-        "Pampas"
+        "湘江之畔",
+        "进击的喵叽"
       ],
       "assigned_providers": [
         "万恶的右手"
@@ -12674,7 +12580,7 @@
         }
       },
       "provider_skill_counts": {},
-      "losses": 59,
+      "losses": 58,
       "rebuffed": 56,
       "median_delay": 282.03,
       "max_delay": 1342.58,
@@ -13188,11 +13094,6 @@
       ],
       "not_rebuffed": [
         {
-          "player": "剧本还可以",
-          "loss": "19:28:59.398",
-          "line": 32115
-        },
-        {
           "player": "晓艸",
           "loss": "20:48:48.965",
           "line": 404626
@@ -13210,11 +13111,11 @@
         "湘江之畔"
       ],
       "provider_candidates": [
-        "进击的喵叽",
+        "Pampas",
         "万恶的右手",
-        "湘江之畔",
         "我爱大油桃",
-        "Pampas"
+        "湘江之畔",
+        "进击的喵叽"
       ],
       "assigned_providers": [
         "湘江之畔"
@@ -13637,11 +13538,11 @@
       "buff": "强效王者祝福",
       "explicit_sources": [],
       "provider_candidates": [
-        "进击的喵叽",
+        "Pampas",
         "万恶的右手",
-        "湘江之畔",
         "我爱大油桃",
-        "Pampas"
+        "湘江之畔",
+        "进击的喵叽"
       ],
       "assigned_providers": [
         "进击的喵叽"
@@ -13700,7 +13601,7 @@
         }
       },
       "provider_skill_counts": {},
-      "losses": 19,
+      "losses": 18,
       "rebuffed": 18,
       "median_delay": 164.16,
       "max_delay": 378.12,
@@ -13904,13 +13805,7 @@
           "line": 402165
         }
       ],
-      "not_rebuffed": [
-        {
-          "player": "剧本还可以",
-          "loss": "19:28:59.398",
-          "line": 32117
-        }
-      ]
+      "not_rebuffed": []
     },
     {
       "buff": "战斗怒吼",
@@ -13919,8 +13814,8 @@
       "assigned_providers": [],
       "paladin_blessing_assignments": {},
       "provider_skill_counts": {},
-      "losses": 457,
-      "rebuffed": 446,
+      "losses": 456,
+      "rebuffed": 445,
       "median_delay": 11.67,
       "max_delay": 5013.26,
       "slow_rebuffs": [
@@ -15982,9 +15877,9 @@
       "buff": "精神（神圣之灵/精神祷言）",
       "explicit_sources": [],
       "provider_candidates": [
+        "小卓大美丽",
         "旺仔丶牛奶糖",
-        "荫羊藿肉苁蓉",
-        "小卓大美丽"
+        "荫羊藿肉苁蓉"
       ],
       "assigned_providers": [],
       "paladin_blessing_assignments": {},
@@ -16206,9 +16101,9 @@
       "buff": "耐力（韧/坚韧祷言）",
       "explicit_sources": [],
       "provider_candidates": [
+        "小卓大美丽",
         "旺仔丶牛奶糖",
-        "荫羊藿肉苁蓉",
-        "小卓大美丽"
+        "荫羊藿肉苁蓉"
       ],
       "assigned_providers": [],
       "paladin_blessing_assignments": {},
@@ -16993,16 +16888,15 @@
         "affected": [
           "Aayaa",
           "Tbug",
-          "剧本还可以",
           "名丨将",
           "御剑乗风来",
           "拂了一身还满",
           "晓艸",
           "木易丶疯子"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 2879.9,
-        "until_end": true
+        "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
+        "duration": 86.6,
+        "until_end": false
       },
       {
         "buff": "强效力量祝福",
@@ -17028,9 +16922,9 @@
         "affected": [
           "大辫子啤酒"
         ],
-        "interval": "孟菲斯托斯战内 至 孟菲斯托斯之后",
-        "duration": 65.8,
-        "until_end": true
+        "interval": "孟菲斯托斯战内",
+        "duration": 65.0,
+        "until_end": false
       },
       {
         "buff": "强效力量祝福",
@@ -17061,8 +16955,8 @@
           "湘江之畔",
           "进击的喵叽"
         ],
-        "interval": "开场→纳尔穆恩之间 至 国王→桑夫·塔斯达尔之间",
-        "duration": 1925.2,
+        "interval": "纳尔穆恩→因塔苟斯之间 至 国王→桑夫·塔斯达尔之间",
+        "duration": 1421.8,
         "until_end": false
       },
       {
@@ -17079,8 +16973,8 @@
           "遁入幻境",
           "鋼須"
         ],
-        "interval": "开场→纳尔穆恩之间 至 库鲁尔战内",
-        "duration": 2527.9,
+        "interval": "纳尔穆恩→因塔苟斯之间 至 库鲁尔战内",
+        "duration": 2022.8,
         "until_end": false
       },
       {
@@ -17093,16 +16987,15 @@
         "affected": [
           "Aayaa",
           "Tbug",
-          "剧本还可以",
           "名丨将",
           "御剑乗风来",
           "拂了一身还满",
           "晓艸",
           "木易丶疯子"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3092.9,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 库鲁尔战内",
+        "duration": 2022.8,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17116,9 +17009,9 @@
           "罗坊",
           "靡不有初"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3084.5,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
+        "duration": 2584.2,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17134,9 +17027,9 @@
           "绍依古",
           "野生小耀西"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3086.4,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
+        "duration": 2584.2,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17150,9 +17043,9 @@
           "旺仔丶牛奶糖",
           "荫羊藿肉苁蓉"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3092.9,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
+        "duration": 2584.2,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17166,9 +17059,9 @@
           "丨雷克萨斯丨",
           "壹個獵人"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3088.3,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
+        "duration": 2584.2,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17181,8 +17074,8 @@
           "妖肆贰",
           "蝶野雏"
         ],
-        "interval": "开场→纳尔穆恩之间 至 国王→桑夫·塔斯达尔之间",
-        "duration": 1937.3,
+        "interval": "纳尔穆恩→因塔苟斯之间 至 国王→桑夫·塔斯达尔之间",
+        "duration": 1421.8,
         "until_end": false
       },
       {
@@ -17196,9 +17089,9 @@
           "蝶野雏",
           "黑星盗"
         ],
-        "interval": "桑夫·塔斯达尔战内 至 孟菲斯托斯之后",
-        "duration": 1160.9,
-        "until_end": true
+        "interval": "桑夫·塔斯达尔战内 至 孟菲斯托斯战内",
+        "duration": 1158.2,
+        "until_end": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17214,9 +17107,9 @@
           "炼洗之命",
           "骨鼓图腾祭"
         ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 3082.3,
-        "until_end": true
+        "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
+        "duration": 2584.2,
+        "until_end": false
       },
       {
         "buff": "强效拯救祝福",
@@ -17259,20 +17152,6 @@
         "interval": "桑夫·塔斯达尔战内 至 库鲁尔→孟菲斯托斯之间",
         "duration": 776.3,
         "until_end": false
-      },
-      {
-        "buff": "强效拯救祝福",
-        "mode": "按职业",
-        "unit": "战士",
-        "responsible": [
-          "万恶的右手"
-        ],
-        "affected": [
-          "剧本还可以"
-        ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 2879.9,
-        "until_end": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17525,20 +17404,6 @@
       {
         "buff": "强效王者祝福",
         "mode": "按职业",
-        "unit": "战士",
-        "responsible": [
-          "进击的喵叽"
-        ],
-        "affected": [
-          "剧本还可以"
-        ],
-        "interval": "开场→纳尔穆恩之间 至 孟菲斯托斯之后",
-        "duration": 2879.9,
-        "until_end": true
-      },
-      {
-        "buff": "强效王者祝福",
-        "mode": "按职业",
         "unit": "牧师",
         "responsible": [
           "进击的喵叽"
@@ -17599,9 +17464,9 @@
         "affected": [
           "心醉"
         ],
-        "interval": "国王→桑夫·塔斯达尔之间 至 孟菲斯托斯之后",
-        "duration": 1200.8,
-        "until_end": true
+        "interval": "国王→桑夫·塔斯达尔之间 至 孟菲斯托斯战内",
+        "duration": 1200.5,
+        "until_end": false
       },
       {
         "buff": "精神（神圣之灵/精神祷言）",
@@ -18136,7 +18001,7 @@
           "casts": 4,
           "first_cast": "20:04:57.515",
           "first_delay": 11.2,
-          "uptime_pct": 182.6,
+          "uptime_pct": 92.6,
           "targetable_uptime_pct": 34.4,
           "gap_intervals": [
             {
@@ -18177,7 +18042,7 @@
           "casts": 4,
           "first_cast": "20:04:55.525",
           "first_delay": 9.21,
-          "uptime_pct": 142.2,
+          "uptime_pct": 95.2,
           "targetable_uptime_pct": 36.8,
           "gap_intervals": [
             {
@@ -18236,7 +18101,7 @@
           "casts": 4,
           "first_cast": "20:04:53.162",
           "first_delay": 6.85,
-          "uptime_pct": 243.2,
+          "uptime_pct": 96.4,
           "targetable_uptime_pct": 70.7,
           "gap_intervals": [
             {
@@ -19423,7 +19288,6 @@
           "Tbug",
           "丨雷克萨斯丨",
           "凶甚",
-          "剧本还可以",
           "壹個獵人",
           "妖肆贰",
           "拂了一身还满",
@@ -19574,7 +19438,7 @@
         "expired": "20:05:25.979",
         "regained": null,
         "delay": null,
-        "combat_delay": 1645.88
+        "combat_delay": 1645.12
       },
       {
         "player": "Pampas",
@@ -19582,7 +19446,7 @@
         "expired": "20:35:03.123",
         "regained": null,
         "delay": null,
-        "combat_delay": 691.75
+        "combat_delay": 690.99
       },
       {
         "player": "万恶的右手",
@@ -19598,7 +19462,7 @@
         "expired": "20:12:55.774",
         "regained": null,
         "delay": null,
-        "combat_delay": 1413.48
+        "combat_delay": 1413.28
       },
       {
         "player": "万恶的右手",
@@ -19606,7 +19470,7 @@
         "expired": "20:22:59.397",
         "regained": null,
         "delay": null,
-        "combat_delay": 1165.13
+        "combat_delay": 1164.92
       },
       {
         "player": "丨雷克萨斯丨",
@@ -19622,7 +19486,7 @@
         "expired": "20:40:43.304",
         "regained": null,
         "delay": null,
-        "combat_delay": 564.13
+        "combat_delay": 563.13
       },
       {
         "player": "凶甚",
@@ -19654,7 +19518,7 @@
         "expired": "20:43:46.553",
         "regained": null,
         "delay": null,
-        "combat_delay": 424.85
+        "combat_delay": 398.07
       },
       {
         "player": "壹個獵人",
@@ -19670,7 +19534,7 @@
         "expired": "20:48:34.642",
         "regained": null,
         "delay": null,
-        "combat_delay": 384.67
+        "combat_delay": 384.16
       },
       {
         "player": "大辫子啤酒",
@@ -19686,7 +19550,7 @@
         "expired": "20:41:30.624",
         "regained": null,
         "delay": null,
-        "combat_delay": 560.78
+        "combat_delay": 558.03
       },
       {
         "player": "拂了一身还满",
@@ -19718,7 +19582,7 @@
         "expired": "20:25:51.654",
         "regained": null,
         "delay": null,
-        "combat_delay": 1060.51
+        "combat_delay": 1059.79
       },
       {
         "player": "野生小耀西",
@@ -20380,9 +20244,9 @@
           "梦境精华药剂"
         ],
         "missing_combat_durations": {
-          "奥法巨人药剂": 2999.04,
-          "奥法药剂": 2999.04,
-          "梦境精华药剂": 2999.04
+          "奥法巨人药剂": 2999.0,
+          "奥法药剂": 2999.0,
+          "梦境精华药剂": 2999.0
         },
         "unknown_combat_duration": 0,
         "note": "缺少已知常驻药剂超过60秒战斗时间"
@@ -22318,7 +22182,7 @@
         "regained_before_pull": [],
         "missing": [],
         "missing_combat_durations": {},
-        "unknown_combat_duration": 119.16,
+        "unknown_combat_duration": 119.11,
         "note": "初始药名不可见，下次开怪后超过60秒战斗时间未见常驻药剂"
       },
       {
@@ -22510,7 +22374,6 @@
       "Aayaa",
       "Tbug",
       "丨雷克萨斯丨",
-      "剧本还可以",
       "壹個獵人",
       "妖肆贰",
       "拂了一身还满",
@@ -22526,14 +22389,6 @@
         "class": "战士",
         "regained": "19:30:03.984",
         "delay": 1.4
-      },
-      {
-        "boss": "守护者纳尔穆恩",
-        "boss_start": "19:30:02.580",
-        "player": "剧本还可以",
-        "class": "战士",
-        "regained": null,
-        "delay": null
       },
       {
         "boss": "守护者纳尔穆恩",
@@ -22570,14 +22425,6 @@
       {
         "boss": "桑夫·塔斯达尔",
         "boss_start": "20:24:07.857",
-        "player": "剧本还可以",
-        "class": "战士",
-        "regained": null,
-        "delay": null
-      },
-      {
-        "boss": "桑夫·塔斯达尔",
-        "boss_start": "20:24:07.857",
         "player": "木易丶疯子",
         "class": "战士",
         "regained": null,
@@ -22588,14 +22435,6 @@
         "boss_start": "20:24:07.857",
         "player": "黑星盗",
         "class": "盗贼",
-        "regained": null,
-        "delay": null
-      },
-      {
-        "boss": "库鲁尔",
-        "boss_start": "20:41:27.277",
-        "player": "剧本还可以",
-        "class": "战士",
         "regained": null,
         "delay": null
       },
@@ -22642,14 +22481,6 @@
       {
         "boss": "孟菲斯托斯",
         "boss_start": "20:48:45.731",
-        "player": "剧本还可以",
-        "class": "战士",
-        "regained": null,
-        "delay": null
-      },
-      {
-        "boss": "孟菲斯托斯",
-        "boss_start": "20:48:45.731",
         "player": "壹個獵人",
         "class": "猎人",
         "regained": "20:48:48.823",
@@ -22685,14 +22516,12 @@
             "一路向西丶",
             "丨雷克萨斯丨",
             "凶甚",
-            "剧本还可以",
             "吊州女王",
             "唯青",
             "壹個獵人",
             "大辫子啤酒",
             "妖肆贰",
             "小卓大美丽",
-            "我爱大油桃",
             "旧德二世",
             "旺仔丶牛奶糖",
             "沐丶辰",
@@ -22721,7 +22550,6 @@
             "丨雷克萨斯丨",
             "仲烛祈世",
             "凶甚",
-            "剧本还可以",
             "吊州女王",
             "唯青",
             "壹個獵人",
@@ -22729,7 +22557,6 @@
             "小卓大美丽",
             "御剑乗风来",
             "心醉",
-            "我爱大油桃",
             "拂了一身还满",
             "旧德二世",
             "旺仔丶牛奶糖",
@@ -23451,14 +23278,6 @@
               "result": "未攻击，计错"
             },
             {
-              "player": "剧本还可以",
-              "class": "战士",
-              "hits": 0,
-              "damage": 0,
-              "is_error": true,
-              "result": "未攻击，计错"
-            },
-            {
               "player": "进击的喵叽",
               "class": "圣骑士",
               "hits": 0,
@@ -23582,7 +23401,6 @@
           "missing": [
             "Pampas",
             "一路向西丶",
-            "剧本还可以",
             "壹個獵人",
             "大辫子啤酒",
             "我爱大油桃",
@@ -23658,503 +23476,490 @@
       "resistance_scope": "装备、野性印记/赐福、魔法抗性药水、种族被动；低于180的装备检查快照不视为完整值",
       "arcane_resistance": [
         {
-          "player": "Aayaa",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "Pampas",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "Tbug",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "一路向西丶",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "万恶的右手",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "不想吃鱼",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "丨小辫子丨",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "丨雷克萨斯丨",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "仲烛祈世",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
           "player": "凶甚",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
+          "total": 269,
+          "display_total": "269",
+          "gear": 249,
           "buff": 20,
           "potion": 0,
           "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "剧本还可以",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "吊州女王",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "名丨将",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "唯青",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "壹個獵人",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "妖肆贰",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "小卓大美丽",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "御剑乗风来",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "心醉",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "我爱大油桃",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "拂了一身还满",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "旧德二世",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "旺仔丶牛奶糖",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "晓艸",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "沐丶辰",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "洛珂珂",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "湘江之畔",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "绍依古",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "罗坊",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "荫羊藿肉苁蓉",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "蝶野雏",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "进击的喵叽",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "遁入幻境",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "野生小耀西",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "鋼須",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "靡不有初",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "骨鼓图腾祭",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "黑星盗",
-          "total": 20,
-          "display_total": "快照不足（已核验下限 20）",
-          "gear": 0,
-          "buff": 20,
-          "potion": 0,
-          "racial": 0,
-          "detail": "野性印记/赐福 +20",
-          "gear_snapshot": false,
-          "verified": false
-        },
-        {
-          "player": "大辫子啤酒",
-          "total": 0,
-          "display_total": "快照不足（已核验下限 0）",
-          "gear": 0,
-          "buff": 0,
-          "potion": 0,
-          "racial": 0,
-          "detail": "日志可核验来源为 0",
-          "gear_snapshot": false,
-          "verified": false
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡肩甲 +20；超凡肩甲附魔 +5；超凡胸甲 +30；法师猎手腰带 +25；超凡护腿 +30；超凡护腿附魔 +25；玛瑙便鞋 +24；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
         },
         {
           "player": "木易丶疯子",
-          "total": 0,
-          "display_total": "快照不足（已核验下限 0）",
-          "gear": 0,
-          "buff": 0,
+          "total": 261,
+          "display_total": "261",
+          "gear": 241,
+          "buff": 20,
           "potion": 0,
           "racial": 0,
-          "detail": "日志可核验来源为 0",
-          "gear_snapshot": false,
-          "verified": false
+          "detail": "炫光头盔 +30；炫光头盔附魔 +25；加丹之牙 +15；加丹之牙附魔 +8；炫光肩铠 +20；炫光胸甲 +30；炫光护腿 +30；炫光护腿附魔 +25；艾德雷斯之戒 +15；艾德雷斯之戒附魔 +8；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "Tbug",
+          "total": 254,
+          "display_total": "254",
+          "gear": 234,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；玛瑙便鞋 +24；卡拉赞的烙印 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "万恶的右手",
+          "total": 249,
+          "display_total": "249",
+          "gear": 229,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡肩甲 +20；超凡胸甲 +30；超凡护腿 +30；超凡护腿附魔 +25；奥术抗性之红玛瑙指环词缀 +17；奥术抗性之红玛瑙指环词缀 +17；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "鋼須",
+          "total": 245,
+          "display_total": "245",
+          "gear": 225,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；湿透的羽毛便鞋 +30；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "心醉",
+          "total": 244,
+          "display_total": "244",
+          "gear": 224,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；玛瑙便鞋 +24；魔动碎片 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "名丨将",
+          "total": 243,
+          "display_total": "243",
+          "gear": 223,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "炫光头盔 +30；炫光头盔附魔 +25；炫光肩铠 +20；炫光肩铠附魔 +5；炫光胸甲 +30；炫光护腿 +30；炫光护腿附魔 +25；卡拉赞的烙印 +15；卡拉赞的烙印附魔 +8；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "丨雷克萨斯丨",
+          "total": 241,
+          "display_total": "241",
+          "gear": 221,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；法师猎手腰带 +25；虚灵护腿 +30；虚灵护腿附魔 +25；卡拉赞的烙印 +15；卡拉赞的烙印附魔 +8；奥术抗性之橄榄石之环附魔 +8；奥术抗性之橄榄石之环词缀 +20；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "洛珂珂",
+          "total": 241,
+          "display_total": "241",
+          "gear": 211,
+          "buff": 20,
+          "potion": 0,
+          "racial": 10,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；青铜龙军团的徽记之戒附魔 +8；魔法导师的封印附魔 +8；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20；高等精灵奥术抗性 +10",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "小卓大美丽",
+          "total": 240,
+          "display_total": "240",
+          "gear": 220,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；魔动碎片 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "唯青",
+          "total": 235,
+          "display_total": "235",
+          "gear": 205,
+          "buff": 20,
+          "potion": 0,
+          "racial": 10,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；压制能量遗物 +10；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20；高等精灵奥术抗性 +10",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "旧德二世",
+          "total": 235,
+          "display_total": "235",
+          "gear": 215,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙衬肩附魔 +5；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；狂野魔法宝石 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "沐丶辰",
+          "total": 235,
+          "display_total": "235",
+          "gear": 215,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；奥法手套 +16；奥术抗性之黄玉戒指词缀 +16；禁锢之戒附魔 +8；缝合披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "蝶野雏",
+          "total": 230,
+          "display_total": "230",
+          "gear": 200,
+          "buff": 20,
+          "potion": 0,
+          "racial": 10,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵护肩附魔 +5；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20；高等精灵奥术抗性 +10",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "Aayaa",
+          "total": 220,
+          "display_total": "220",
+          "gear": 200,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护腿 +30；虚灵护腿附魔 +25；玛瑙便鞋 +24；奥术之力指环 +15；奥术之力指环附魔 +8；卡拉赞的烙印 +15；卡拉赞的烙印附魔 +8；龙血斗篷 +5；龙血斗篷附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "御剑乗风来",
+          "total": 220,
+          "display_total": "220",
+          "gear": 200,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "炫光头盔 +30；炫光头盔附魔 +25；炫光肩铠 +20；炫光肩铠附魔 +5；炫光胸甲 +30；炫光护腿 +30；炫光护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "进击的喵叽",
+          "total": 220,
+          "display_total": "220",
+          "gear": 190,
+          "buff": 20,
+          "potion": 0,
+          "racial": 10,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡胸甲 +30；超凡护腿 +30；超凡护腿附魔 +25；狂野魔法宝石 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20；高等精灵奥术抗性 +10",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "遁入幻境",
+          "total": 220,
+          "display_total": "220",
+          "gear": 200,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；魔动碎片 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "黑星盗",
+          "total": 220,
+          "display_total": "220",
+          "gear": 200,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵护肩附魔 +5；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
         },
         {
           "player": "炼洗之命",
-          "total": 0,
-          "display_total": "快照不足（已核验下限 0）",
-          "gear": 0,
-          "buff": 0,
+          "total": 219,
+          "display_total": "219",
+          "gear": 199,
+          "buff": 20,
           "potion": 0,
           "racial": 0,
-          "detail": "日志可核验来源为 0",
-          "gear_snapshot": false,
-          "verified": false
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡护腿 +30；超凡护腿附魔 +25；奥术抗性之橄榄石之环附魔 +8；奥术抗性之橄榄石之环词缀 +21；魔动碎片 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "一路向西丶",
+          "total": 215,
+          "display_total": "215",
+          "gear": 195,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡肩甲 +20；超凡胸甲 +30；超凡护腿 +30；超凡护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "壹個獵人",
+          "total": 215,
+          "display_total": "215",
+          "gear": 195,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "大辫子啤酒",
+          "total": 215,
+          "display_total": "215",
+          "gear": 195,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护肩 +20；虚灵外套 +30；虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "靡不有初",
+          "total": 215,
+          "display_total": "215",
+          "gear": 195,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "晓艸",
+          "total": 210,
+          "display_total": "210",
+          "gear": 190,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "炫光头盔 +30；炫光头盔附魔 +25；炫光胸甲 +30；炫光护腿 +30；炫光护腿附魔 +25；卡拉赞的烙印 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "湘江之畔",
+          "total": 200,
+          "display_total": "200",
+          "gear": 180,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡肩甲 +20；超凡护腿 +30；超凡护腿附魔 +25；狂野魔法宝石 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "吊州女王",
+          "total": 195,
+          "display_total": "195",
+          "gear": 175,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "不想吃鱼",
+          "total": 193,
+          "display_total": "193",
+          "gear": 173,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡护腿 +30；超凡护腿附魔 +25；奥术抗性之橄榄石之环附魔 +8；奥术抗性之橄榄石之环词缀 +20；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "Pampas",
+          "total": 191,
+          "display_total": "191",
+          "gear": 171,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；多彩之力项圈 +13；多彩之力项圈附魔 +8；宇宙护腿 +30；宇宙护腿附魔 +25；压制能量遗物 +10；奥术抗性之巨力披风附魔 +15；奥术抗性之巨力披风词缀 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "仲烛祈世",
+          "total": 185,
+          "display_total": "185",
+          "gear": 165,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙护腿 +30；宇宙护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "罗坊",
+          "total": 185,
+          "display_total": "185",
+          "gear": 165,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙护腿 +30；宇宙护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "荫羊藿肉苁蓉",
+          "total": 185,
+          "display_total": "185",
+          "gear": 165,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；宇宙衬肩附魔 +5；宇宙外衣 +30；宇宙护腿 +30；宇宙护腿附魔 +25；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "我爱大油桃",
+          "total": 180,
+          "display_total": "180",
+          "gear": 160,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡罩帽附魔 +25；超凡护腿 +30；超凡护腿附魔 +25；狂野魔法宝石 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "丨小辫子丨",
+          "total": 165,
+          "display_total": "165",
+          "gear": 145,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "绍依古",
+          "total": 165,
+          "display_total": "165",
+          "gear": 145,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙护腿 +30；宇宙护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "骨鼓图腾祭",
+          "total": 165,
+          "display_total": "165",
+          "gear": 145,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "超凡罩帽 +30；超凡肩甲 +20；超凡胸甲 +30；超凡护腿 +30；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "野生小耀西",
+          "total": 145,
+          "display_total": "145",
+          "gear": 125,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "宇宙头饰 +30；宇宙头饰附魔 +25；宇宙衬肩 +20；狂野魔法宝石 +15；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "拂了一身还满",
+          "total": 140,
+          "display_total": "140",
+          "gear": 120,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵头饰 +30；虚灵头饰附魔 +25；虚灵外套 +30；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "旺仔丶牛奶糖",
+          "total": 123,
+          "display_total": "123",
+          "gear": 103,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "魔网调谐项圈 +27；魔网调谐项圈附魔 +8；Leggings of Transcendence +10；奥术之力指环 +15；奥术之力指环附魔 +8；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
+        },
+        {
+          "player": "妖肆贰",
+          "total": 110,
+          "display_total": "110",
+          "gear": 90,
+          "buff": 20,
+          "potion": 0,
+          "racial": 0,
+          "detail": "虚灵护腿 +30；虚灵护腿附魔 +25；魔网亲和披风 +20；魔网亲和披风附魔 +15；野性印记/赐福 +20",
+          "gear_snapshot": true,
+          "verified": true
         }
       ],
       "arcane_protection_missing": [
         "Pampas",
         "一路向西丶",
         "丨小辫子丨",
-        "剧本还可以",
         "唯青",
         "壹個獵人",
         "大辫子啤酒",
@@ -24474,9 +24279,10 @@
           "raid_hit_count": 36,
           "raid_damage": 184139,
           "average_raid_damage": 5115.0,
-          "counted_error": true,
+          "counted_error": false,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "chained_to": "Tbug"
         },
         {
           "player": "黑星盗",
@@ -24487,9 +24293,10 @@
           "raid_hit_count": 36,
           "raid_damage": 184139,
           "average_raid_damage": 5115.0,
-          "counted_error": true,
+          "counted_error": false,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "chained_to": "Tbug"
         },
         {
           "player": "御剑乗风来",
@@ -24500,9 +24307,10 @@
           "raid_hit_count": 36,
           "raid_damage": 184139,
           "average_raid_damage": 5115.0,
-          "counted_error": true,
+          "counted_error": false,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "chained_to": "Tbug"
         }
       ],
       "continued_attack_issues": [
@@ -24890,7 +24698,7 @@
           "window_end_reason": "小怪死亡",
           "counts_errors": false,
           "result": "10秒内击杀，零伤害不计错",
-          "eligible_count": 13,
+          "eligible_count": 12,
           "results": [
             {
               "player": "Aayaa",
@@ -24918,12 +24726,6 @@
             },
             {
               "player": "凶甚",
-              "hits": 0,
-              "damage": 0,
-              "is_error": false
-            },
-            {
-              "player": "剧本还可以",
               "hits": 0,
               "damage": 0,
               "is_error": false
@@ -24984,7 +24786,7 @@
           "window_end_reason": "小怪死亡",
           "counts_errors": true,
           "result": "正常检查",
-          "eligible_count": 13,
+          "eligible_count": 12,
           "results": [
             {
               "player": "Aayaa",
@@ -25015,12 +24817,6 @@
               "hits": 1,
               "damage": 1216,
               "is_error": false
-            },
-            {
-              "player": "剧本还可以",
-              "hits": 0,
-              "damage": 0,
-              "is_error": true
             },
             {
               "player": "壹個獵人",
@@ -25067,7 +24863,6 @@
           ],
           "noncontributors": [
             "Aayaa",
-            "剧本还可以",
             "拂了一身还满",
             "蝶野雏",
             "进击的喵叽",
@@ -26334,7 +26129,6 @@
             "Tbug",
             "丨雷克萨斯丨",
             "凶甚",
-            "剧本还可以",
             "壹個獵人",
             "妖肆贰",
             "拂了一身还满",
@@ -28673,44 +28467,6 @@
         ]
       },
       {
-        "player": "我爱大油桃",
-        "count": 17,
-        "details": [
-          {
-            "issue": "团队Buff·强效庇护祝福断档",
-            "count": 10
-          },
-          {
-            "issue": "国王（国际象棋）·死于国王之怒",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少火炕",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·梦境精华药剂到期未及时补",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "Pampas",
         "count": 15,
         "details": [
@@ -28799,63 +28555,27 @@
         ]
       },
       {
-        "player": "黑星盗",
+        "player": "我爱大油桃",
         "count": 15,
         "details": [
           {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "issue": "团队Buff·强效庇护祝福断档",
+            "count": 10
+          },
+          {
+            "issue": "国王（国际象棋）·死于国王之怒",
             "count": 1
           },
           {
-            "issue": "国王（国际象棋）·首次心控未及时自解",
+            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
             "count": 1
           },
           {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "issue": "消耗品·梦境精华药剂到期未及时补",
             "count": 1
           },
           {
-            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少火炕",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·第一阶段非T攻击地狱火",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·猫鼬药剂到期未及时补",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
+            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
             "count": 1
           },
           {
@@ -28914,6 +28634,68 @@
           },
           {
             "issue": "阿诺玛鲁斯·开打未吃奥术防护",
+            "count": 1
+          },
+          {
+            "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "黑星盗",
+        "count": 14,
+        "details": [
+          {
+            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "count": 1
+          },
+          {
+            "issue": "国王（国际象棋）·首次心控未及时自解",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少火炕",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·第一阶段非T攻击地狱火",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·大怪成功变身",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "消耗品·猫鼬药剂到期未及时补",
             "count": 1
           },
           {
@@ -29003,44 +28785,6 @@
         ]
       },
       {
-        "player": "进击的喵叽",
-        "count": 12,
-        "details": [
-          {
-            "issue": "团队Buff·强效王者祝福断档",
-            "count": 5
-          },
-          {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-            "count": 1
-          },
-          {
-            "issue": "国王（国际象棋）·首次心控未及时自解",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少火炕",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "野生小耀西",
         "count": 12,
         "details": [
@@ -29083,78 +28827,6 @@
         ]
       },
       {
-        "player": "万恶的右手",
-        "count": 11,
-        "details": [
-          {
-            "issue": "团队Buff·强效拯救祝福断档",
-            "count": 7
-          },
-          {
-            "issue": "消耗品·梦境火酒药剂到期未及时补",
-            "count": 2
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·奥法药剂到期未及时补",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "player": "剧本还可以",
-        "count": 11,
-        "details": [
-          {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少火炕",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "绍依古",
         "count": 11,
         "details": [
@@ -29184,6 +28856,66 @@
           },
           {
             "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "进击的喵叽",
+        "count": 11,
+        "details": [
+          {
+            "issue": "团队Buff·强效王者祝福断档",
+            "count": 4
+          },
+          {
+            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "count": 1
+          },
+          {
+            "issue": "国王（国际象棋）·首次心控未及时自解",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少火炕",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·大怪成功变身",
+            "count": 1
+          },
+          {
+            "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "万恶的右手",
+        "count": 10,
+        "details": [
+          {
+            "issue": "团队Buff·强效拯救祝福断档",
+            "count": 6
+          },
+          {
+            "issue": "消耗品·梦境火酒药剂到期未及时补",
+            "count": 2
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "消耗品·奥法药剂到期未及时补",
             "count": 1
           }
         ]
@@ -29439,40 +29171,6 @@
         ]
       },
       {
-        "player": "Aayaa",
-        "count": 8,
-        "details": [
-          {
-            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
-            "count": 2
-          },
-          {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "仲烛祈世",
         "count": 8,
         "details": [
@@ -29576,6 +29274,36 @@
           },
           {
             "issue": "守护者纳尔穆恩·开打缺少火炕",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "Aayaa",
+        "count": 7,
+        "details": [
+          {
+            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
+            "count": 2
+          },
+          {
+            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·大怪成功变身",
             "count": 1
           }
         ]
@@ -29723,28 +29451,6 @@
         ]
       },
       {
-        "player": "御剑乗风来",
-        "count": 4,
-        "details": [
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·未接手导致冷漠打击达到7层",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "晓艸",
         "count": 4,
         "details": [
@@ -29762,6 +29468,24 @@
           },
           {
             "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "御剑乗风来",
+        "count": 3,
+        "details": [
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·未接手导致冷漠打击达到7层",
             "count": 1
           }
         ]
@@ -29882,7 +29606,6 @@
           "Tbug",
           "丨雷克萨斯丨",
           "凶甚",
-          "剧本还可以",
           "壹個獵人",
           "妖肆贰",
           "拂了一身还满",

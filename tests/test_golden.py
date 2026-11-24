@@ -24,11 +24,11 @@ class GoldenBaselineTest(unittest.TestCase):
     def test_key_metrics(self) -> None:
         metrics = json.loads((GOLDEN / "metrics.json").read_text(encoding="utf-8"))
         self.assertEqual(metrics["date"], "2026-11-18")
-        self.assertEqual(metrics["roster_size"], 41)
-        self.assertEqual(len(metrics["roster"]), 41)
+        self.assertEqual(metrics["roster_size"], 40)
+        self.assertEqual(len(metrics["roster"]), 40)
         self.assertEqual(metrics["error_ranking"][0]["player"], "湘江之畔")
         self.assertEqual(metrics["error_ranking"][0]["count"], 20)
-        self.assertEqual(metrics["dps"]["active_combat_time"], 3104.623)
+        self.assertEqual(metrics["dps"]["active_combat_time"], 3104.577)
         self.assertEqual(metrics["dps"]["players"][0]["name"], "妖肆贰")
         self.assertEqual(metrics["wipe_causes"][0]["encounter"], "桑夫·塔斯达尔第1次尝试")
         self.assertTrue(metrics["zero_error"])
@@ -54,5 +54,5 @@ class FullGoldenRegressionTest(unittest.TestCase):
         notes = config.raw["analysis"]["display_notes"]
         display = json.dumps(build_model(result.report, notes), ensure_ascii=False, indent=2) + "\n"
         self.assertEqual(display.encode("utf-8"), (GOLDEN / "display.json").read_bytes())
-        self.assertEqual(sum(item["weight"] for item in result.findings), 374)
+        self.assertEqual(sum(item["weight"] for item in result.findings), 356)
         self.assertTrue(all(item["evidence_lines"] for item in result.findings))
