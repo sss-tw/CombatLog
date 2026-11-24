@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "timezone": "+08:00",
+  "combat_log": "C:\\wow-turtle\\Logs\\WoWCombatLog_20261105_卡拉赞之塔_完整.txt",
+  "raw_combat_log": "C:\\wow-turtle\\Logs\\WoWRawCombatLog_20261112.txt",
+  "custom_data": "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794190107.txt",
+  "input_notes": [
+    "普通日志用已切好的 11/5 卡拉赞之塔完整文件，时间 12:10:30.876 至 13:43:55.286。",
+    "RAW 日志 11/5 只在 WoWRawCombatLog_20261112.txt 中（约 2GB），只读扫描。",
+    "CustomData 用 backup_1794190107，覆盖 2026-11-05 至 2026-11-09。"
+  ],
+  "raid_start": "12:10:30.876",
+  "raid_end": "13:40:45.967",
+  "zone_names": ["卡拉赞之塔"],
+  "logger_identity": {
+    "guid": "0x00000000005061FB",
+    "name": "旧德二世"
+  },
+  "roster_overrides": [],
+  "encounters": [
+    {"name": "守护者纳尔穆恩", "start": "12:27:24.343", "end": "12:31:33.061"},
+    {"name": "魔网观察者因塔苟斯", "start": "12:36:39.629", "end": "12:38:43.463"},
+    {"name": "阿诺玛鲁斯", "start": "12:45:00.278", "end": "12:46:38.266"},
+    {"name": "麦迪文的回响", "start": "12:54:51.915", "end": "12:56:13.577"},
+    {"name": "国王（国际象棋）", "start": "12:59:56.832", "end": "13:03:03.092"},
+    {"name": "桑夫·塔斯达尔", "start": "13:09:24.254", "end": "13:12:08.738"},
+    {"name": "破碎者鲁普图兰", "start": "13:17:22.257", "end": "13:20:00.625"},
+    {"name": "库鲁尔", "start": "13:28:19.174", "end": "13:31:12.639"},
+    {"name": "孟菲斯托斯", "start": "13:36:35.889", "end": "13:40:45.967"}
+  ],
+  "raid_groups": {},
+  "class_overrides": {},
+  "role_overrides": {},
+  "curse_assignments": {},
+  "known_units": ["苍白的骑兵", "枯萎的兵卒"],
+  "analysis": {
+    "custom_data_anchor": {
+      "epoch_ms": 1793853899990,
+      "log_time": "12:45:00.278",
+      "note": "阿诺玛鲁斯开怪。60 次玩家死亡配对得出 CustomData 比战斗日志早 288 毫秒（279 至 295）。"
+    },
+    "custom_data_files": [
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794190107.txt"
+    ]
+  }
+}

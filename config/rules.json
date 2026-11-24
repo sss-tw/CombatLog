@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "rule_version": "2026-11-18.1",
+  "notes": "规则阈值目前仍在 rules/engine.py 中，与 2026-11-18 黄金基准一致。这里只放跨日期通用的首领知识与 rule_id，不写当周玩家名。",
+  "equipment_arcane_resistance": "config/equipment_arcane_resistance.json",
+  "demon_slaying_bosses": ["守护者纳尔穆恩", "桑夫·塔斯达尔", "库鲁尔", "孟菲斯托斯"],
+  "boss_rule_prefix": {
+    "团队Buff": "buffs",
+    "消耗品": "consumables",
+    "守护者纳尔穆恩": "narmuun",
+    "魔网观察者因塔苟斯": "intagos",
+    "阿诺玛鲁斯": "anomalus",
+    "麦迪文的回响": "medivh",
+    "国王（国际象棋）": "king",
+    "桑夫·塔斯达尔": "sanf",
+    "破碎者鲁普图兰": "rupturan",
+    "库鲁尔": "kruul",
+    "孟菲斯托斯": "mephistroth"
+  },
+  "unordered_golden_paths": ["$.buffs[].provider_candidates"],
+  "evidence_keywords": {
+    "anomalus.奥术超载炸到大团": ["奥术超载", "奥术爆炸"],
+    "anomalus.中奥术超载超过允许时间仍打Boss": ["奥术超载", "阿诺玛鲁斯"],
+    "anomalus.爆炸后打Boss但未踩圈": ["奥术超载", "阿诺玛鲁斯"],
+    "narmuun.猫头鹰低血量继续攻击": ["枭"],
+    "narmuun.红蓝月伤害别人": ["月"],
+    "king.第1次未攻击损坏的战车": ["损坏的战车"],
+    "king.第1次未攻击干枯的主教": ["干枯的主教"],
+    "sanf.大怪成功变身": ["裂隙元素"],
+    "sanf.失落暗影未转火": ["失落暗影"],
+    "sanf.失落暗影转火过晚": ["失落暗影"],
+    "sanf.裂隙回馈死亡责任": ["裂隙回馈", "裂隙诅咒"],
+    "rupturan.死于摇摇欲坠喷发": ["喷发"],
+    "mephistroth.噩梦爬行者吸蓝前未转火": ["噩梦爬行者"]
+  }
+}

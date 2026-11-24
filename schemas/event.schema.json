@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "event.schema.json",
+  "title": "标准战斗事件",
+  "type": "object",
+  "required": ["line", "timestamp", "seconds", "type"],
+  "properties": {
+    "line": { "type": "integer", "minimum": 1 },
+    "timestamp": { "type": "string" },
+    "seconds": { "type": "number" },
+    "type": { "type": "string" },
+    "source": { "type": ["string", "null"] },
+    "source_guid": { "type": ["string", "null"] },
+    "target": { "type": ["string", "null"] },
+    "target_guid": { "type": ["string", "null"] },
+    "spell": { "type": ["string", "null"] },
+    "amount": { "type": ["integer", "null"] },
+    "flags": { "type": "array", "items": { "type": "string" } },
+    "candidates": { "type": "array" },
+    "text": { "type": "string" }
+  },
+  "additionalProperties": true
+}

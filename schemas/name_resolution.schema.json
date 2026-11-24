@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "name_resolution.schema.json",
+  "title": "姓名解析结果",
+  "type": "object",
+  "required": ["status", "method", "candidates", "flags", "confidence", "raw"],
+  "properties": {
+    "status": { "enum": ["resolved", "ambiguous", "unresolved"] },
+    "method": {
+      "enum": ["guid", "longest_name", "logger_pronoun", "pet_owner", "ambiguous_name", "unresolved"]
+    },
+    "name": { "type": ["string", "null"] },
+    "guid": { "type": ["string", "null"] },
+    "spell": { "type": ["string", "null"] },
+    "pet": { "type": ["string", "null"] },
+    "candidates": { "type": "array" },
+    "flags": { "type": "array", "items": { "type": "string" } },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "raw": { "type": "string" }
+  }
+}

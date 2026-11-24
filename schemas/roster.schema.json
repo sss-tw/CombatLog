@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "roster.schema.json",
+  "title": "冻结名单",
+  "type": "object",
+  "required": ["schema_version", "date", "logger", "roster_size", "players", "warnings"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "date": { "type": "string" },
+    "logger": { "$ref": "#/$defs/player" },
+    "roster_size": { "type": "integer", "minimum": 0 },
+    "players": { "type": "array", "items": { "$ref": "#/$defs/player" } },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  },
+  "$defs": {
+    "player": {
+      "type": "object",
+      "required": ["guid", "name", "class_id", "class_name", "sources", "confirmed"],
+      "properties": {
+        "guid": { "type": ["string", "null"] },
+        "name": { "type": "string" },
+        "class_id": { "type": ["string", "null"] },
+        "class_name": { "type": ["string", "null"] },
+        "sources": { "type": "array", "items": { "type": "string" } },
+        "confirmed": { "type": "boolean" }
+      }
+    }
+  },
+  "additionalProperties": true
+}

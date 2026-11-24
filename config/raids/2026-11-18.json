@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "timezone": "+08:00",
+  "combat_log": "C:\\wow-turtle\\Logs\\WoWCombatLog.txt",
+  "raw_combat_log": "C:\\wow-turtle\\Logs\\WoWRawCombatLog.txt",
+  "custom_data": "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1795139175.txt",
+  "declared_inputs": {
+    "combat_log": "C:\\wow-turtle\\Logs\\WoWCombatLog.txt",
+    "raw_combat_log": "C:\\wow-turtle\\Logs\\WoWRawCombatLog.txt",
+    "custom_data": "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世.txt"
+  },
+  "input_notes": [
+    "启动说明要求先记录的三个绝对路径写在 declared_inputs。普通日志和 RAW 日志都含有 2026-11-18。",
+    "VanillaWCL_Basin_of_Stars_旧德二世.txt 当前只覆盖 2026-11-20 09:46:17 至 21:22:34，不含 2026-11-18。",
+    "2026-11-18 的团队快照在同目录备份 VanillaWCL_Basin_of_Stars_旧德二世_backup_1795139175.txt，时间范围是 2026-11-16 11:55:52 至 2026-11-20 09:46:14。custom_data 指向该备份。以后移动文件只改这份日期配置。"
+  ],
+  "raid_start": "19:24:07.050",
+  "raid_end": "20:55:10.466",
+  "zone_names": ["卡拉赞之塔"],
+  "logger_identity": {
+    "guid": "0x00000000005061FB",
+    "name": "旧德二世"
+  },
+  "roster_overrides": [],
+  "encounters": [
+    {"name": "守护者纳尔穆恩", "start": "19:30:02.580", "end": "19:34:55.528"},
+    {"name": "魔网观察者因塔苟斯", "start": "19:40:34.062", "end": "19:42:38.997"},
+    {"name": "阿诺玛鲁斯", "start": "19:49:07.010", "end": "19:50:58.618"},
+    {"name": "麦迪文的回响", "start": "20:00:14.563", "end": "20:01:34.122"},
+    {"name": "国王（国际象棋）", "start": "20:04:46.317", "end": "20:07:57.201"},
+    {
+      "name": "桑夫·塔斯达尔",
+      "start": "20:24:07.857",
+      "end": "20:27:02.279",
+      "attempts": [
+        {"attempt": 1, "result": "灭团", "start": "20:16:52.326", "end": "20:19:47.169"},
+        {"attempt": 2, "result": "击杀", "start": "20:24:07.857", "end": "20:27:02.279"}
+      ]
+    },
+    {"name": "破碎者鲁普图兰", "start": "20:29:38.661", "end": "20:32:29.518"},
+    {"name": "库鲁尔", "start": "20:41:27.277", "end": "20:44:26.732"},
+    {"name": "孟菲斯托斯", "start": "20:48:45.731", "end": "20:55:10.466"}
+  ],
+  "raid_groups": {},
+  "class_overrides": {},
+  "role_overrides": {},
+  "curse_assignments": {},
+  "known_units": ["苍白的骑兵", "枯萎的兵卒"],
+  "analysis": {
+    "custom_data_anchor": {
+      "epoch_ms": 1795002546458,
+      "log_time": "19:49:07.010",
+      "note": "CustomData 毫秒时间与战斗日志时钟对齐点：阿诺玛鲁斯开怪。CustomData 比战斗日志早约 0.552 秒。"
+    },
+    "custom_data_files": [
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1793590431.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1793844063.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794190107.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794293048.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794555525.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1794801353.txt",
+      "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1795139175.txt"
+    ],
+    "display_notes": {
+      "wipe_chain": "本周唯一灭团发生在桑夫第一次尝试：裂隙行者成功形成裂隙元素，裂隙元素连续三次奥术爆炸直接造成30人死亡；按本次复盘口径，全体物理近战各计1次错误。",
+      "king_attempts_title": "本周仅一次尝试并直接击杀",
+      "king_attempts_text": "没有可写的灭团责任链。开场三类棋子仍按职责检查：干枯的主教由远程负责，另外两类由近战负责；坦克豁免，10秒内死亡的小怪不判未转火。",
+      "sanf_wipe_title": "第一次灭团原因",
+      "sanf_wipe_text": "德莱尼裂隙行者成功形成裂隙元素；裂隙元素在+2:29、+2:38、+2:50连续三次奥术爆炸，直接造成30人死亡，其余9人被首领或残余小怪收掉。第二次击杀中行者均在读条完成前死亡。",
+      "mephistroth_shackles": "本周没有挣脱镣铐爆炸，四轮地狱之怒碎片均判定成功。"
+    },
+    "wipe_causes": [
+      {
+        "boss": "桑夫·塔斯达尔",
+        "attempt": 1,
+        "encounter": "桑夫·塔斯达尔第1次尝试",
+        "responsible": "全体物理近战",
+        "error": "德莱尼裂隙行者成功形成裂隙元素，裂隙元素未在可处理窗口解决",
+        "result": "裂隙元素于开怪后+2:29、+2:38、+2:50连续三次奥术爆炸，直接造成30人死亡；其余9人随后被Boss或残余小怪收掉。第二次击杀中裂隙行者均在读条完成前死亡，没有生成裂隙元素。"
+      }
+    ]
+  },
+  "golden_sources": {
+    "analysis": "C:\\wow-turtle\\karazhan_20261118_analysis.json",
+    "display": "C:\\Users\\sekilai\\Documents\\CombatLog\\reports\\2026-11-18\\data.json",
+    "page": "C:\\Users\\sekilai\\Documents\\CombatLog\\reports\\2026-11-18\\index.html"
+  }
+}

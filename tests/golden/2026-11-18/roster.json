@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "logger": {
+    "guid": "0x00000000005061fb",
+    "name": "旧德二世",
+    "class_id": "DRUID",
+    "class_name": "德鲁伊",
+    "sources": [
+      "custom_data",
+      "raw_combat_log"
+    ],
+    "confirmed": true
+  },
+  "roster_size": 41,
+  "players": [
+    {
+      "guid": "0x0000000000523b72",
+      "name": "Aayaa",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006a5303",
+      "name": "Pampas",
+      "class_id": "PALADIN",
+      "class_name": "圣骑士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004a03ff",
+      "name": "Tbug",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000764480",
+      "name": "一路向西丶",
+      "class_id": "SHAMAN",
+      "class_name": "萨满",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000007adbc1",
+      "name": "万恶的右手",
+      "class_id": "PALADIN",
+      "class_name": "圣骑士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004af2ee",
+      "name": "不想吃鱼",
+      "class_id": "SHAMAN",
+      "class_name": "萨满",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000053c59d",
+      "name": "丨小辫子丨",
+      "class_id": "HUNTER",
+      "class_name": "猎人",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006b6cc2",
+      "name": "丨雷克萨斯丨",
+      "class_id": "HUNTER",
+      "class_name": "猎人",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000555312",
+      "name": "仲烛祈世",
+      "class_id": "MAGE",
+      "class_name": "法师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000074b9bb",
+      "name": "凶甚",
+      "class_id": "SHAMAN",
+      "class_name": "萨满",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004cd2c9",
+      "name": "剧本还可以",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004e5ece",
+      "name": "吊州女王",
+      "class_id": "WARLOCK",
+      "class_name": "术士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000492fae",
+      "name": "名丨将",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000034b042",
+      "name": "唯青",
+      "class_id": "MAGE",
+      "class_name": "法师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004f81b3",
+      "name": "壹個獵人",
+      "class_id": "HUNTER",
+      "class_name": "猎人",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000061637d",
+      "name": "大辫子啤酒",
+      "class_id": "HUNTER",
+      "class_name": "猎人",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000004ccfaf",
+      "name": "妖肆贰",
+      "class_id": "ROGUE",
+      "class_name": "盗贼",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006c686a",
+      "name": "小卓大美丽",
+      "class_id": "PRIEST",
+      "class_name": "牧师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000054d766",
+      "name": "御剑乗风来",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000051572c",
+      "name": "心醉",
+      "class_id": "DRUID",
+      "class_name": "德鲁伊",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000002cda8",
+      "name": "我爱大油桃",
+      "class_id": "PALADIN",
+      "class_name": "圣骑士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000007491df",
+      "name": "拂了一身还满",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005061fb",
+      "name": "旧德二世",
+      "class_id": "DRUID",
+      "class_name": "德鲁伊",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000551763",
+      "name": "旺仔丶牛奶糖",
+      "class_id": "PRIEST",
+      "class_name": "牧师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005f50ef",
+      "name": "晓艸",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000050b9ff",
+      "name": "木易丶疯子",
+      "class_id": "WARRIOR",
+      "class_name": "战士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005c96c0",
+      "name": "沐丶辰",
+      "class_id": "DRUID",
+      "class_name": "德鲁伊",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000057a9d0",
+      "name": "洛珂珂",
+      "class_id": "MAGE",
+      "class_name": "法师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006c2076",
+      "name": "湘江之畔",
+      "class_id": "PALADIN",
+      "class_name": "圣骑士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000687683",
+      "name": "炼洗之命",
+      "class_id": "SHAMAN",
+      "class_name": "萨满",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006e4d53",
+      "name": "绍依古",
+      "class_id": "MAGE",
+      "class_name": "法师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000007425f8",
+      "name": "罗坊",
+      "class_id": "WARLOCK",
+      "class_name": "术士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000054e388",
+      "name": "荫羊藿肉苁蓉",
+      "class_id": "PRIEST",
+      "class_name": "牧师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005d168d",
+      "name": "蝶野雏",
+      "class_id": "ROGUE",
+      "class_name": "盗贼",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000006b20a2",
+      "name": "进击的喵叽",
+      "class_id": "PALADIN",
+      "class_name": "圣骑士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000061af0e",
+      "name": "遁入幻境",
+      "class_id": "DRUID",
+      "class_name": "德鲁伊",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000007833a3",
+      "name": "野生小耀西",
+      "class_id": "MAGE",
+      "class_name": "法师",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005c2666",
+      "name": "鋼須",
+      "class_id": "DRUID",
+      "class_name": "德鲁伊",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x000000000070fc84",
+      "name": "靡不有初",
+      "class_id": "WARLOCK",
+      "class_name": "术士",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x00000000005a1dd7",
+      "name": "骨鼓图腾祭",
+      "class_id": "SHAMAN",
+      "class_name": "萨满",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    },
+    {
+      "guid": "0x0000000000577501",
+      "name": "黑星盗",
+      "class_id": "ROGUE",
+      "class_name": "盗贼",
+      "sources": [
+        "custom_data",
+        "raw_combat_log"
+      ],
+      "confirmed": true
+    }
+  ],
+  "warnings": [],
+  "input_hashes": {
+    "custom_data": {
+      "path": "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1795139175.txt",
+      "bytes": 163603914,
+      "sha256": "5da76f7286ec010b5e4deb63d61a44a382d57eb4b1b79158727b1e7daa3188d6"
+    },
+    "raw_combat_log": {
+      "path": "C:\\wow-turtle\\Logs\\WoWRawCombatLog.txt",
+      "bytes": 214482109,
+      "sha256": "864f0d0df0137dac4a8bed25d286234ee18c9c660808cf12d71608428e403f5e"
+    }
+  }
+}

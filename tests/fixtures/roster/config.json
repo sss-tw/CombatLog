@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-18",
+  "timezone": "+08:00",
+  "combat_log": "raw_basic.txt",
+  "raw_combat_log": "raw_basic.txt",
+  "custom_data": "custom_basic.txt",
+  "raid_start": "19:00:00.000",
+  "raid_end": "19:10:00.000",
+  "zone_names": ["测试副本"],
+  "logger_identity": {
+    "guid": "0x0000000000000004",
+    "name": "记录者"
+  },
+  "roster_overrides": []
+}
