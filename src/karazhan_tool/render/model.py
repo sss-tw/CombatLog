@@ -932,10 +932,13 @@ def build_model(report, notes=None):
                 ("target", "目标"), ("dispeller", "驱散者"), ("offset", "时间"),
             ]),
             selected_table("4. 腐化直接点名", medivh.get("corruption_boss_applications", []), [
-                ("offset", "时间"), ("targets", "目标"),
+                ("offset", "时间"), (lambda item: "、".join(item.get("targets") or []), "目标"),
             ]),
             selected_table("5. 腐化传播", medivh.get("corruption_transmissions", []), [
-                ("offset", "时间"), ("source", "传播候选"), ("target", "新感染者"),
+                ("offset", "时间"),
+                (lambda item: "、".join(item.get("sources") or []), "传播候选"),
+                (lambda item: "、".join(item.get("targets") or []), "新感染者"),
+                (lambda item: "是" if item.get("unique_source") else "否（多个候选，不计错）", "是否计错"),
             ]),
             selected_table("6. 腐化被直接驱散", medivh.get("corruption_dispels", []), [
                 ("offset", "时间"), ("target", "目标"), ("dispeller", "驱散者"),

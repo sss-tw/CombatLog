@@ -3072,6 +3072,10 @@ def analyze_medivh(rows, roster, parsed_damage, roles):
         loss = re.match(r"麦迪文的腐化效果从(.+?)身上消失", row["body"])
         if loss:
             removals.append({"target": normalize_unit(loss.group(1)), "sec": row["sec"]})
+        # 持有者死亡时腐化随之消失，日志不会再写“效果消失”。
+        died = re.match(r"(.+?)死亡了。$", row["body"])
+        if died and normalize_unit(died.group(1)) in roster:
+            removals.append({"target": normalize_unit(died.group(1)), "sec": row["sec"], "death": True})
         damage = re.match(r"麦迪文的回响的麦迪文的腐化使(.+?)受到了\d+点", row["body"])
         if damage:
             ticks.append({"target": normalize_unit(damage.group(1)), "sec": row["sec"]})
@@ -3126,6 +3130,8 @@ def analyze_medivh(rows, roster, parsed_damage, roles):
 
     corruption_dispels = []
     for removal in removals:
+        if removal.get("death"):
+            continue
         dispel = find_dispel_cast(corruption_rows, removal["target"], removal["sec"])
         if dispel:
             corruption_dispels.append({
@@ -3729,18 +3735,21 @@ def analyze_rupturan(rows, roster, parsed_damage, roles):
             and ("使%s受到了" % target) not in body
         )
 
-    low_health_attacks = defaultdict(lambda: {"hits": 0, "damage": 0, "spells": Counter()})
+    low_health_attacks = defaultdict(lambda: {"hits": 0, "damage": 0, "spells": Counter(), "first_sec": None})
     for event in boss_damage:
         if event["sec"] < five_pct_sec or not is_active_player_attack(event, "破碎者鲁普图兰"):
             continue
         if not any(left <= event["sec"] <= right for left, right in stone_windows):
             continue
         item = low_health_attacks[event["source"]]
+        if item["first_sec"] is None:
+            item["first_sec"] = event["sec"]
         item["hits"] += 1
         item["damage"] += event["damage"]
         item["spells"][event["spell"]] += 1
     low_health_boss_issues = [{
         "player": player,
+        "first_offset": round(values["first_sec"] - start_sec, 3),
         "hits": values["hits"],
         "damage": values["damage"],
         "spells": values["spells"].most_common(5),
