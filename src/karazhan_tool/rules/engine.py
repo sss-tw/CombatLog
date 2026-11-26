@@ -233,7 +233,11 @@ def parse_lines():
                 continue
             match = re.match(re.escape(DATE_PREFIX) + r"(\d\d:\d\d:\d\d\.\d\d\d)  (.*)", line.rstrip())
             if match:
-                rows.append({"line": number, "ts": match.group(1), "sec": seconds(match.group(1)), "body": match.group(2)})
+                body = match.group(2)
+                # 记录者本人的死亡写作“你死了。”，统一成其他人的“X死亡了。”句式。
+                if body == "你死了。":
+                    body = "你死亡了。"
+                rows.append({"line": number, "ts": match.group(1), "sec": seconds(match.group(1)), "body": body})
     return rows
 
 
@@ -331,6 +335,17 @@ def split_source(prefix, roster):
 
 
 def parse_damage(body, roster):
+    # 记录者本人受到的持续/法术伤害：“你受到N点暗影伤害（皇后的黑暗屈从）。”
+    self_hit = re.match(r"你受到(\d+)点(\S*?)伤害（(.+?)）", body)
+    if self_hit:
+        source, spell = split_source(self_hit.group(3), roster)
+        return {
+            "source": source,
+            "spell": spell or "近战",
+            "target": normalize_unit("你"),
+            "damage": int(self_hit.group(1)),
+            "school": self_hit.group(2) if self_hit.group(2) in MAGIC_SCHOOLS else "物理",
+        }
     damage_match = re.search(r"(?:造成|受到了)(\d+)(?:点|的致命一击)", body)
     if not damage_match:
         return None
@@ -3374,10 +3389,14 @@ def analyze_king(rows, roster, parsed_damage, roles):
 
     late_bows = []
     for row in king_rows:
-        match = re.match(r"皇后的黑暗屈从使(.+?)受到了(\d+)点暗影伤害", row["body"])
+        match = (
+            re.match(r"皇后的黑暗屈从使(.+?)受到了(\d+)点暗影伤害", row["body"])
+            or re.match(r"()你受到(\d+)点暗影伤害（皇后的黑暗屈从）", row["body"])
+        )
         if not match:
             continue
-        player = normalize_unit(match.group(1))
+        raw_player = match.group(1) or "你"
+        player = normalize_unit(raw_player)
         attempt = next((
             item for item in attempts
             if seconds(item["start"]) <= row["sec"] <= seconds(item["end"])
@@ -3386,7 +3405,7 @@ def analyze_king(rows, roster, parsed_damage, roles):
             applied = next((
                 candidate for candidate in reversed(king_rows)
                 if candidate["sec"] <= row["sec"]
-                and candidate["body"] == player + "受到了黑暗屈从效果的影响（1）。"
+                and candidate["body"] == raw_player + "受到了黑暗屈从效果的影响（1）。"
             ), None)
             late_bows.append({
                 "attempt": attempt["attempt"],
@@ -3768,15 +3787,38 @@ def analyze_rupturan(rows, roster, parsed_damage, roles):
         and row["body"] == "活体碎块死亡了。"
     ]
     living_fragment_kills = []
+    def dead_through(player, left, right):
+        """窗口开始前已死亡，且到窗口结束都没有自己的动作（未被复活）。"""
+        last_death = max(
+            (other["sec"] for other in player_deaths if other["player"] == player and other["sec"] < left),
+            default=None,
+        )
+        if last_death is None:
+            return False
+        # 持续伤害在死后仍会跳，只认主动施法和直接命中；死后1秒内的命中可能是死前发出的飞行弹道。
+        names = [player] + ([name for name in PRONOUNS if name not in PLAYER_CLASSES] if player == LOGGER_NAME else [])
+        for row in rows:
+            if not (last_death + 1.0 < row["sec"] <= right):
+                continue
+            body = row["body"]
+            if not any(body.startswith(name) for name in names) or "使" in body:
+                continue
+            if "施放了" in body or "开始施放" in body or "击中" in body or "造成" in body:
+                return False
+        return True
+
+    # 被碎块打残后由其他伤害补死也算碎块致死：死前3秒内受过活体碎块攻击即可。
     for death in player_deaths:
-        killing_event = next((
+        recent_hits = [
             event for event in parsed_damage
-            if event["source"] == "活体碎块"
-            and event["target"] == death["player"]
-            and abs(event["sec"] - death["sec"]) <= 0.2
-        ), None)
-        if not killing_event:
+            if event["target"] == death["player"]
+            and death["sec"] - 3.0 <= event["sec"] <= death["sec"] + 0.2
+        ]
+        fragment_hits = [event for event in recent_hits if event["source"] == "活体碎块"]
+        if not fragment_hits:
             continue
+        killing_event = fragment_hits[-1]
+        last_hit = max(recent_hits, key=lambda event: (event["sec"], event["line"]))
         previous_add_death = max(
             [sec for sec in living_fragment_deaths if sec < death["sec"]]
             or [fragment_first]
@@ -3795,10 +3837,14 @@ def analyze_rupturan(rows, roster, parsed_damage, roles):
             "victim": death["player"],
             "offset": round(death["sec"] - start_sec, 3),
             "spell": killing_event["spell"],
-            "damage": killing_event["damage"],
+            "damage": sum(event["damage"] for event in fragment_hits),
+            "last_hit": "%s的%s（%d）" % (last_hit["source"], last_hit["spell"], last_hit["damage"]),
             "window": round(death["sec"] - window_start, 3),
             "non_attackers": [
-                player for player in remote_players if hits_by_remote[player] == 0
+                player for player in remote_players
+                if hits_by_remote[player] == 0
+                and joined_at(player) <= window_start and left_at(player) >= death["sec"]
+                and not dead_through(player, window_start, death["sec"])
             ],
             "attackers": [{
                 "player": player,

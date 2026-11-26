@@ -1091,8 +1091,8 @@ def build_model(report, notes=None):
                 ("hits", "命中"), ("damage", "伤害"),
             ]),
             selected_table("3. 二阶段活体碎块击杀玩家", rupturan.get("living_fragment_kills", []), [
-                ("victim", "死者"), ("offset", "时间"), ("damage", "碎块伤害"),
-                ("non_attackers", "未转火远程"),
+                ("victim", "死者"), ("offset", "时间"), ("damage", "死前3秒碎块伤害"),
+                ("last_hit", "最后一击"), ("non_attackers", "未转火远程"),
             ]),
             selected_table("4. 恶魔之心抽蓝", rupturan.get("mana_drains", []), [
                 ("player", "玩家"), ("class", "职业"), ("ticks", "跳数"),
