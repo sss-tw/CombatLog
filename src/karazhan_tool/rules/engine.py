@@ -2535,6 +2535,60 @@ def analyze_narmuun(rows, roster, parsed_damage, roles):
     }
 
 
+INTAGOS_AFFINITIES = ("红色亲和", "绿色亲和", "水晶亲和", "魔力亲和", "黑色亲和", "蓝色亲和")
+# 亲和没打到0血就消失时，首领伤害随即暴涨（暴风雪、奥术飞弹单跳约为平时3–4倍）。
+INTAGOS_SURGE_HIT = 6000
+INTAGOS_SURGE_WINDOW = 15.0
+
+
+def intagos_affinity_checks(rows, roster, start_sec, end_sec):
+    checks = []
+    last_hit = {}
+    window_rows = [row for row in rows if start_sec <= row["sec"] <= end_sec + 2]
+    for row in window_rows:
+        body = row["body"]
+        damage = parse_damage(body, roster)
+        if damage and damage["target"] in INTAGOS_AFFINITIES:
+            last_hit[damage["target"]] = row["sec"]
+            continue
+        if not body.endswith("死亡了。") or body[:-4] not in INTAGOS_AFFINITIES:
+            continue
+        affinity, death_sec = body[:-4], row["sec"]
+        before = Counter()
+        after = Counter()
+        for other in window_rows:
+            if not (death_sec - 60 <= other["sec"] <= death_sec + INTAGOS_SURGE_WINDOW):
+                continue
+            hit = parse_damage(other["body"], roster)
+            if not hit or hit["source"] != "魔网观察者因塔苟斯" or hit["target"] not in roster:
+                continue
+            bucket = after if other["sec"] > death_sec else before
+            bucket[hit["spell"]] = max(bucket[hit["spell"]], hit["damage"])
+        surge = sorted(
+            (spell for spell, value in after.items() if value >= INTAGOS_SURGE_HIT),
+            key=lambda spell: -after[spell],
+        )
+        hit_sec = last_hit.get(affinity)
+        gap = round(death_sec - hit_sec, 3) if hit_sec is not None else None
+        killing_blow = gap is not None and gap <= 0.1
+        checks.append({
+            "affinity": affinity,
+            "death_offset": round(death_sec - start_sec, 2),
+            "last_hit_gap": gap,
+            "boss_hits": "、".join(
+                "%s %s→%d" % (spell, before[spell] or "-", after[spell]) for spell in surge
+            ) or "无暴涨",
+            "killed": killing_blow and not surge,
+            "result": (
+                "未打掉（首领伤害暴涨）" if surge
+                else "已打掉" if killing_blow
+                else "未打掉（消失时没有最后一击）"
+            ),
+        })
+        last_hit.pop(affinity, None)
+    return checks
+
+
 def analyze_intagos(rows, roster, parsed_damage, dps_players, roles):
     start, end = encounter_window("魔网观察者因塔苟斯")
     start_sec, end_sec = seconds(start), seconds(end)
@@ -2592,82 +2646,162 @@ def analyze_intagos(rows, roster, parsed_damage, dps_players, roles):
         "暗影": {"术士", "牧师"},
         "冰霜": {"法师"},
     }
+    affinity_attempts = []
+    for window in ATTEMPTS.get("魔网观察者因塔苟斯") or [{"attempt": 1, "result": "击杀", "start": start, "end": end}]:
+        for item in intagos_affinity_checks(rows, roster, seconds(window["start"]), seconds(window["end"])):
+            affinity_attempts.append(dict(item, attempt=window["attempt"], attempt_result=window.get("result")))
+    capable_by_school = {}
+    for school, classes in affinity_capable_classes.items():
+        capable_by_school[school] = []
+        for player in roster:
+            if role_by_name[player]["role"] == "坦克":
+                continue
+            dps_item = dps_by_name.get(player)
+            player_class = dps_item["class"] if dps_item else PLAYER_CLASSES.get(player, "未识别")
+            if school == "物理":
+                is_capable = role_by_name[player]["role"] in ("物理近战", "物理远程")
+            else:
+                is_capable = player_class in classes
+            if is_capable:
+                capable_by_school[school].append(player)
+
+    windows = ATTEMPTS.get("魔网观察者因塔苟斯") or [
+        {"attempt": 1, "result": "击杀", "start": start, "end": end}
+    ]
     affinities = []
-    boss_death_sec = next(
-        (
+    for window in windows:
+        window_start, window_end = seconds(window["start"]), seconds(window["end"])
+        is_kill = window.get("result") == "击杀"
+        checks = intagos_affinity_checks(rows, roster, window_start, window_end)
+        boss_death_sec = next((
             row["sec"] for row in rows
-            if start_sec <= row["sec"] <= end_sec + 2
+            if window_start <= row["sec"] <= window_end + 2
             and row["body"] == "魔网观察者因塔苟斯死亡了。"
-        ),
-        end_sec,
-    )
-    for affinity, allowed_school in affinity_schools.items():
-        gains = [
-            row["sec"] for row in rows
-            if start_sec <= row["sec"] <= end_sec
-            and re.match(r".+?获得了" + re.escape(affinity) + r"的效果", row["body"])
-        ]
-        deaths = [
-            row["sec"] for row in rows
-            if start_sec <= row["sec"] <= boss_death_sec + 2
-            and row["body"] == affinity + "死亡了。"
-        ]
-        if not gains and not deaths:
-            continue
-        affinity_start = min(gains) if gains else start_sec
-        normal_deaths = [death for death in deaths if death <= boss_death_sec]
-        count_zero_errors = bool(normal_deaths)
-        affinity_end = min(normal_deaths) if normal_deaths else boss_death_sec
-        outcome = (
-            "亲和被正常击杀，零对应伤害计错"
-            if count_zero_errors
-            else "以击杀Boss收尾，未打亲和不计错"
-        )
-        damage_by_player = Counter()
-        hits_by_player = Counter()
-        for event in parsed_damage:
-            if not (affinity_start <= event["sec"] <= affinity_end):
-                continue
-            if event["target"] != affinity or event["school"] != allowed_school:
-                continue
-            if event["source"] in roster:
-                damage_by_player[event["source"]] += event["damage"]
-                hits_by_player[event["source"]] += 1
-        capable = []
-        if allowed_school is not None:
-            for player in roster:
-                if role_by_name[player]["role"] == "坦克":
-                    continue
-                dps_item = dps_by_name.get(player)
-                player_class = dps_item["class"] if dps_item else PLAYER_CLASSES.get(player, "未识别")
-                if allowed_school == "物理":
-                    is_capable = role_by_name[player]["role"] in ("物理近战", "物理远程")
+        ), window_end)
+        player_deaths = defaultdict(list)
+        for row in rows:
+            if window_start <= row["sec"] <= window_end and row["body"].endswith("死亡了。"):
+                player = normalize_unit(row["body"][:-4])
+                if player in roster:
+                    player_deaths[player].append(row["sec"])
+        for affinity, allowed_school in affinity_schools.items():
+            gains = sorted(
+                row["sec"] for row in rows
+                if window_start <= row["sec"] <= window_end
+                and re.match(r".+?获得了" + re.escape(affinity) + r"的效果", row["body"])
+            )
+            deaths = sorted(
+                row["sec"] for row in rows
+                if window_start <= row["sec"] <= boss_death_sec + 2
+                and row["body"] == affinity + "死亡了。"
+            )
+            # 每次亲和死亡结束一轮；最后一轮若没有死亡，以首领死亡或团灭收尾。
+            episodes = []
+            previous = window_start - 1
+            for death in deaths:
+                round_gains = [sec for sec in gains if previous < sec <= death]
+                episodes.append((round_gains, death))
+                previous = death
+            trailing = [sec for sec in gains if sec > previous]
+            if trailing:
+                episodes.append((trailing, None))
+            for round_gains, death in episodes:
+                no_gains = not round_gains and not is_kill
+                affinity_start = (
+                    min(round_gains) if round_gains
+                    else death if no_gains
+                    else window_start
+                )
+                if death is not None and death <= boss_death_sec:
+                    affinity_end = death
                 else:
-                    is_capable = player_class in affinity_capable_classes[allowed_school]
-                if is_capable:
-                    capable.append(player)
-        affinities.append({
-            "affinity": affinity,
-            "allowed_school": allowed_school or "历史未确认",
-            "start_offset": round(affinity_start - start_sec, 2),
-            "end_offset": round(affinity_end - start_sec, 2),
-            "outcome": outcome,
-            "count_zero_errors": count_zero_errors,
-            "players": [{
-                "player": player,
-                "class": dps_by_name[player]["class"] if player in dps_by_name else PLAYER_CLASSES.get(player, "未识别"),
-                "hits": hits_by_player[player],
-                "damage": damage_by_player[player],
-                "is_error": hits_by_player[player] == 0 and count_zero_errors,
-                "result": (
-                    "已攻击"
-                    if hits_by_player[player] > 0
-                    else "未攻击，计错"
-                    if count_zero_errors
-                    else "未攻击，Boss击杀收尾不计错"
-                ),
-            } for player in sorted(capable, key=lambda name: (-damage_by_player[name], name))],
-        })
+                    affinity_end = boss_death_sec
+                check = next((
+                    item for item in checks
+                    if item["affinity"] == affinity and death is not None
+                    and abs(item["death_offset"] - (death - window_start)) < 0.01
+                ), None)
+                exploded = check is not None and not check["killed"]
+                if death is None:
+                    affinity_attempts.append({
+                        "affinity": affinity,
+                        "death_offset": None,
+                        "last_hit_gap": None,
+                        "boss_hits": "-",
+                        "killed": False,
+                        "result": "击杀Boss时仍在" if is_kill else "团灭时仍在",
+                        "attempt": window["attempt"],
+                        "attempt_result": window.get("result"),
+                    })
+                if no_gains:
+                    count_zero_errors = False
+                    outcome = "团灭时才出现，没人获得亲和效果，不计错"
+                elif death is None or death > boss_death_sec:
+                    count_zero_errors = False
+                    outcome = (
+                        "以击杀Boss收尾，未打亲和不计错" if is_kill
+                        else "团灭时亲和仍在，未打亲和不计错"
+                    )
+                elif is_kill and exploded:
+                    count_zero_errors = False
+                    outcome = "亲和未打掉但仍击杀Boss，零伤害不计错"
+                else:
+                    count_zero_errors = True
+                    outcome = (
+                        "亲和未打掉，零对应伤害计错" if exploded
+                        else "亲和被正常击杀，零对应伤害计错"
+                    )
+                damage_by_player = Counter()
+                hits_by_player = Counter()
+                for event in parsed_damage:
+                    if not (affinity_start <= event["sec"] <= affinity_end):
+                        continue
+                    if event["target"] != affinity or event["school"] != allowed_school:
+                        continue
+                    if event["source"] in roster:
+                        damage_by_player[event["source"]] += event["damage"]
+                        hits_by_player[event["source"]] += 1
+                players = []
+                for player in sorted(
+                    capable_by_school[allowed_school],
+                    key=lambda name: (-damage_by_player[name], name),
+                ):
+                    dead_before = any(moment <= affinity_start for moment in player_deaths[player])
+                    absent = not (joined_at(player) <= affinity_start <= left_at(player))
+                    counted = count_zero_errors and not dead_before and not absent
+                    players.append({
+                        "player": player,
+                        "class": dps_by_name[player]["class"] if player in dps_by_name else PLAYER_CLASSES.get(player, "未识别"),
+                        "hits": hits_by_player[player],
+                        "damage": damage_by_player[player],
+                        "is_error": hits_by_player[player] == 0 and counted,
+                        "result": (
+                            "已攻击"
+                            if hits_by_player[player] > 0
+                            else "亲和出现时不在团内，不计错"
+                            if absent
+                            else "亲和出现前已死亡，不计错"
+                            if dead_before
+                            else "未攻击，计错"
+                            if counted
+                            else "未攻击，不计错"
+                        ),
+                    })
+                affinities.append({
+                    "attempt": window["attempt"],
+                    "attempt_result": window.get("result"),
+                    "affinity": affinity,
+                    "allowed_school": allowed_school,
+                    "start_offset": round(affinity_start - window_start, 2),
+                    "end_offset": round(affinity_end - window_start, 2),
+                    "outcome": outcome,
+                    "count_zero_errors": count_zero_errors,
+                    "players": players,
+                })
+    affinities.sort(key=lambda item: (item["attempt"], item["start_offset"]))
+    affinity_attempts.sort(key=lambda item: (
+        item["attempt"], item["death_offset"] if item["death_offset"] is not None else float("inf"),
+    ))
 
     preparation = []
     missing_frost = []
@@ -2755,6 +2889,7 @@ def analyze_intagos(rows, roster, parsed_damage, dps_players, roles):
             "class_rule": "火焰和冰霜亲和不统计萨满；自然亲和仍统计萨满",
         },
         "affinities": affinities,
+        "affinity_attempts": affinity_attempts,
         "preparation": preparation,
         "curse_summary": {
             "applicable_count": len(curse_results),
@@ -2798,10 +2933,44 @@ def find_dispel_cast(rows, target, event_sec, window=0.2):
     return matches[0] if len(matches) == 1 else None
 
 
-def analyze_medivh(rows, roster):
+# 打到地狱火不算主动攻击的伤害：被动反伤、持续伤害、站位范围效果。宠物伤害另行排除。
+MEDIVH_INFERNAL_IGNORED_SPELLS = {
+    "闪电之盾", "荆棘术", "惩戒光环", "火焰之盾", "献祭光环",
+    "重伤", "奉献", "燃烧", "古代协律",
+}
+
+
+def analyze_medivh(rows, roster, parsed_damage, roles):
     start, end = encounter_window("麦迪文的回响")
     start_sec, end_sec = seconds(start), seconds(end)
     fight_rows = [row for row in rows if start_sec <= row["sec"] <= end_sec]
+
+    tanks = {item["name"] for item in roles if item["role"] == "坦克"}
+    for row in fight_rows:
+        taunt = re.match(r"(.+?)对势不可挡的地狱火使用(嘲讽|低吼|清算之手)", row["body"])
+        if taunt and normalize_unit(taunt.group(1)) in roster:
+            tanks.add(normalize_unit(taunt.group(1)))
+    infernal_damage = defaultdict(lambda: {"hits": 0, "damage": 0, "first_sec": None, "spells": Counter()})
+    for event in parsed_damage:
+        if not (start_sec <= event["sec"] <= end_sec) or event["target"] != "势不可挡的地狱火":
+            continue
+        if event["source"] not in roster or event["source"] in tanks:
+            continue
+        if event["spell"] in MEDIVH_INFERNAL_IGNORED_SPELLS or event["spell"] == "宠物近战" or event["spell"].startswith("宠物："):
+            continue
+        item = infernal_damage[event["source"]]
+        item["hits"] += 1
+        item["damage"] += event["damage"]
+        item["spells"][event["spell"]] += 1
+        if item["first_sec"] is None:
+            item["first_sec"] = event["sec"]
+    infernal_issues = [{
+        "player": player,
+        "first_offset": round(values["first_sec"] - start_sec, 3),
+        "hits": values["hits"],
+        "damage": values["damage"],
+        "spells": values["spells"].most_common(),
+    } for player, values in sorted(infernal_damage.items(), key=lambda item: (-item[1]["damage"], item[0]))]
 
     casts = []
     for row in fight_rows:
@@ -2983,6 +3152,7 @@ def analyze_medivh(rows, roster):
         "corruption_boss_applications": boss_applications,
         "corruption_transmissions": transmissions,
         "corruption_dispels": corruption_dispels,
+        "infernal_issues": infernal_issues,
         "corruption_attribution_limit": "每次无人持有腐化时出现的首名感染者视为Boss主动点名；下一次Boss点名前的新增感染者全部视为前一批感染者传播。普通日志不记录精确传播源，按同期腐化跳伤者列候选，多个候选时不强行唯一归因。",
     }
 
@@ -4014,31 +4184,51 @@ def analyze_mephistroth(rows, roster, parsed_damage, roles):
         episode["duration"] = round(resolved_sec - episode["applied_sec"], 3)
         episode.setdefault("resolution", "战斗结束前未见结算")
 
+    # 挣脱镣铐与首领血量无关，灭团尝试同样追责。
     shackle_damage = defaultdict(lambda: {
         "targets": set(),
         "hits": 0,
         "damage": 0,
         "first_sec": None,
     })
+    attempt_windows = [
+        (item["attempt"], item["result"], seconds(item["start"]), seconds(item["end"]))
+        for item in ATTEMPTS.get("孟菲斯托斯") or []
+    ] or [(1, "击杀", start_sec, end_sec)]
     for event in parsed_damage:
-        if (
-            start_sec <= event["sec"] <= end_sec
-            and event["spell"] == "挣脱镣铐"
-            and event["source"] in roster
-            and event["target"] in roster
-        ):
-            item = shackle_damage[event["source"]]
+        if event["spell"] != "挣脱镣铐" or event["source"] not in roster or event["target"] not in roster:
+            continue
+        window = next((w for w in attempt_windows if w[2] <= event["sec"] <= w[3]), None)
+        if window is None:
+            continue
+        item = shackle_damage[(window, event["source"])]
+        if event["target"] != event["source"]:
             item["targets"].add(event["target"])
-            item["hits"] += 1
-            item["damage"] += event["damage"]
-            if item["first_sec"] is None:
-                item["first_sec"] = event["sec"]
-    shackle_explosions = [{
-        "trigger": player,
-        "offset": round(values["first_sec"] - start_sec, 3),
-        "hits": len(values["targets"]),
-        "damage": values["damage"],
-    } for player, values in sorted(shackle_damage.items())]
+        item["hits"] += 1
+        item["damage"] += event["damage"]
+        if item["first_sec"] is None:
+            item["first_sec"] = event["sec"]
+    ordered = sorted(shackle_damage.items(), key=lambda item: (item[0][0][0], item[1]["first_sec"]))
+    shackle_explosions = []
+    for (window, player), values in ordered:
+        # 被别人的挣脱镣铐炸到后1秒内自己也挣脱，属于连锁，归到先炸的人。
+        root = next((
+            other_player for (other_window, other_player), other in ordered
+            if other_window == window and other_player != player
+            and player in other["targets"]
+            and 0 <= values["first_sec"] - other["first_sec"] <= 1.0
+        ), None)
+        shackle_explosions.append({
+            "attempt": window[0],
+            "attempt_result": window[1],
+            "trigger": player,
+            "offset": round(values["first_sec"] - window[2], 3),
+            "hits": len(values["targets"]),
+            "players": "、".join(sorted(values["targets"])),
+            "damage": values["damage"],
+            "chained_to": root,
+            "counted_error": root is None,
+        })
 
     boss_damage = sorted([
         event for event in parsed_damage
@@ -4513,11 +4703,14 @@ def analyze_anomalus(rows, roster, parsed_damage, roles):
             explosion_pulses.append({
                 "sec": event["sec"], "last_sec": event["sec"],
                 "targets": set(), "damage": 0,
+                "per_target": defaultdict(int), "last_hit": {},
             })
         pulse = explosion_pulses[-1]
         pulse["last_sec"] = event["sec"]
         pulse["targets"].add(event["target"])
         pulse["damage"] += event["damage"]
+        pulse["per_target"][event["target"]] += event["damage"]
+        pulse["last_hit"][event["target"]] = event["sec"]
 
     overloads = []
     seen_applications = set()
@@ -4550,6 +4743,14 @@ def analyze_anomalus(rows, roster, parsed_damage, roles):
                 target = normalize_unit(death.group(1))
                 if target in roster:
                     deaths.append((target, row["sec"]))
+
+    # 炸死：被该次爆炸命中后0.5秒内死亡。
+    for pulse in explosion_pulses:
+        pulse["killed"] = [{
+            "player": player,
+            "damage": pulse["per_target"][player],
+        } for player, hit_sec in sorted(pulse["last_hit"].items(), key=lambda item: item[1])
+            if any(name == player and hit_sec <= moment <= hit_sec + 0.5 for name, moment in deaths)]
 
     suppression_gains = {}
     unstable_hits = defaultdict(list)
@@ -4590,6 +4791,9 @@ def analyze_anomalus(rows, roster, parsed_damage, roles):
         ) if explosion_pulses else None
         if pulse and abs(pulse["last_sec"] - resolved_sec) > 1.0:
             pulse = None
+        if pulse:
+            pulse.setdefault("holders", set()).add(target)
+        episode["pulse"] = pulse
         attack_deadline = (
             resolved_sec - 8.0 if order <= 3
             else applied_sec + 3.0
@@ -4654,7 +4858,33 @@ def analyze_anomalus(rows, roster, parsed_damage, roles):
             ),
             "soaked": bool(soaks),
             "first_soak_offset": round(soaks[0]["sec"] - start_sec, 3) if soaks else None,
+            "_pulse": pulse,
         })
+    # 炸死人：被炸死者受到超过4000伤害算持有者的错；没超过4000的算被炸死者自己的错。
+    overload_death_issues = []
+    for item in overload_results:
+        pulse = item.pop("_pulse")
+        killed = [
+            victim for victim in (pulse or {}).get("killed", [])
+            if victim["player"] not in pulse.get("holders", set())
+        ]
+        item["killed"] = [dict(victim, lethal=victim["damage"] > 4000) for victim in killed]
+        item["killed_players"] = "、".join(
+            "%s（%d）" % (victim["player"], victim["damage"]) for victim in killed
+        ) or "无"
+        if any(victim["lethal"] for victim in item["killed"]):
+            item["counted_error"] = True
+        if pulse is None or pulse.get("issues_done"):
+            continue
+        pulse["issues_done"] = True
+        for victim in killed:
+            if victim["damage"] <= 4000:
+                overload_death_issues.append({
+                    "player": victim["player"],
+                    "offset": round(pulse["last_hit"][victim["player"]] - start_sec, 3),
+                    "damage": victim["damage"],
+                    "holders": "、".join(sorted(pulse.get("holders", set()))),
+                })
     mark_chained_overloads(overload_results)
 
     return {
@@ -4668,12 +4898,163 @@ def analyze_anomalus(rows, roster, parsed_damage, roles):
         ],
         "arcane_prisons": prisons,
         "overloads": overload_results,
+        "overload_death_issues": overload_death_issues,
         "continued_attack_issues": continued_attack_issues,
         "no_soak_issues": no_soak_issues,
     }
 
 
-def build_error_summary(report):
+# 灭团时间线按首领挑选关键事件：首领/小怪读条、全团点名、首领获得的效果、
+# 关键单位死亡、成片命中团员的技能。团员死亡总是列出。
+WIPE_TIMELINE_SPECS = {
+    "魔网观察者因塔苟斯": {
+        "casts": {
+            "魔网观察者因塔苟斯": ["召唤魔鳞观察者", "召唤魔鳞幼龙", "魔线扰动"],
+        },
+        "unit_deaths": ["蓝色亲和", "红色亲和", "魔力亲和", "水晶亲和", "魔鳞魔网搜寻者"],
+        "damage_spells": ["魔爆术", "暴风雪", "魔鳞爆发"],
+    },
+    "桑夫·塔斯达尔": {
+        "casts": {
+            "桑夫·塔斯达尔": ["裂隙回馈", "仇恨溢出"],
+            "德莱尼裂隙行者": ["形成裂隙元素"],
+        },
+        "unit_deaths": ["德莱尼裂隙行者", "失落暗影的德莱尼人"],
+        "damage_spells": ["奥术爆炸", "裂隙回馈"],
+    },
+    "孟菲斯托斯": {
+        "casts": {
+            "孟菲斯托斯": ["地狱之怒碎片", "外域的恐惧", "恐惧魔王的嚎叫"],
+        },
+        "raid_auras": ["军团镣铐"],
+        "unit_auras": {"孟菲斯托斯": ["深渊之恨"]},
+        "unit_deaths": ["地狱之怒碎片"],
+        "damage_spells": ["挣脱镣铐", "深渊之恨", "雷霆一击"],
+    },
+}
+
+
+def _wipe_attempt_timeline(rows, roster, boss, attempt):
+    spec = WIPE_TIMELINE_SPECS.get(boss)
+    window = next((
+        item for item in ATTEMPTS.get(boss) or [] if item.get("attempt") == attempt
+    ), None)
+    if spec is None or window is None:
+        return None
+    start_sec, end_sec = seconds(window["start"]), seconds(window["end"])
+    attempt_rows = [row for row in rows if start_sec <= row["sec"] <= end_sec]
+    events = []
+
+    def push(sec, text):
+        events.append({"offset": round(sec - start_sec, 1), "event": text})
+
+    unit_re = r"(.+?)(?: \([^()]+\))?"
+    last_cast = {}
+    raid_aura_waves = {}
+    unit_aura_seen = {}
+    unit_death_runs = {}
+    damage_bursts = {}
+    last_hit = {}
+    death_cluster = []
+
+    def flush_deaths():
+        if not death_cluster:
+            return
+        causes = Counter(cause for unused, cause in death_cluster[1:] if cause)
+        names = [name for name, unused in death_cluster[1:]]
+        text = "死亡%d人" % len(names)
+        if causes:
+            text += "（%s）" % "、".join("%s×%d" % item for item in causes.most_common())
+        push(death_cluster[0], text + "：" + "、".join(names))
+        death_cluster.clear()
+
+    for row in attempt_rows:
+        body, sec = row["body"], row["sec"]
+        cast = re.match(unit_re + r"(?:开始施放|施放了)(.+?)。$", body)
+        if cast and cast.group(2) in (spec.get("casts") or {}).get(cast.group(1), []):
+            key = (cast.group(1), cast.group(2))
+            if sec - last_cast.get(key, -99) > 3.0:
+                push(sec, "%s施放%s" % key)
+            last_cast[key] = sec
+        aura = re.match(r"(.+?)受到了(.+?)效果的影响", body)
+        if aura and aura.group(2) in spec.get("raid_auras", []) and normalize_unit(aura.group(1)) in roster:
+            wave = raid_aura_waves.get(aura.group(2))
+            if wave and sec - wave[-1][0] <= 1.0:
+                wave.append((sec, normalize_unit(aura.group(1))))
+            else:
+                wave = raid_aura_waves.setdefault(aura.group(2), [])
+                if wave:
+                    push(wave[0][0], "%s点名%d人" % (aura.group(2), len({name for unused, name in wave})))
+                raid_aura_waves[aura.group(2)] = [(sec, normalize_unit(aura.group(1)))]
+        gain = re.match(unit_re + r"获得了(.+?)的效果", body)
+        if gain and gain.group(2) in (spec.get("unit_auras") or {}).get(gain.group(1), []):
+            key = (gain.group(1), gain.group(2))
+            if key not in unit_aura_seen:
+                push(sec, "%s获得%s" % key)
+            unit_aura_seen[key] = sec
+        died = re.match(unit_re + r"死亡了。", body)
+        if died:
+            name = died.group(1)
+            player = normalize_unit(name)
+            if player in roster:
+                if death_cluster and sec - death_cluster[0] > 2.0:
+                    flush_deaths()
+                if not death_cluster:
+                    death_cluster.append(sec)
+                hit = last_hit.get(player)
+                death_cluster.append((player, hit[1] if hit and sec - hit[0] <= 3.0 else None))
+            elif name in spec.get("unit_deaths", []):
+                run = unit_death_runs.get(name)
+                if run and sec - run[-1] <= 10.0:
+                    run.append(sec)
+                else:
+                    if run:
+                        push(run[0], "%s死亡%d个" % (name, len(run)) if len(run) > 1 else "%s死亡" % name)
+                    unit_death_runs[name] = [sec]
+        damage = parse_damage(body, roster)
+        if damage and damage["target"] in roster:
+            last_hit[damage["target"]] = (sec, damage["spell"])
+            if damage["spell"] in spec.get("damage_spells", []) and damage["source"] != damage["target"]:
+                source = damage["source"] if damage["source"] in roster else None
+                key = (source, damage["spell"])
+                burst = damage_bursts.get(key)
+                if burst and sec - burst["last"] <= 2.0:
+                    burst["last"] = sec
+                    burst["targets"].add(damage["target"])
+                    burst["damage"] += damage["damage"]
+                else:
+                    if burst:
+                        events.append(burst)
+                    damage_bursts[key] = {
+                        "first": sec, "last": sec, "source": source, "spell": damage["spell"],
+                        "targets": {damage["target"]}, "damage": damage["damage"],
+                    }
+    flush_deaths()
+    for spell, wave in raid_aura_waves.items():
+        push(wave[0][0], "%s点名%d人" % (spell, len({name for unused, name in wave})))
+    for name, run in unit_death_runs.items():
+        push(run[0], "%s死亡%d个" % (name, len(run)) if len(run) > 1 else "%s死亡" % name)
+    bursts = [item for item in events if "targets" in item] + list(damage_bursts.values())
+    events = [item for item in events if "targets" not in item]
+    for burst in bursts:
+        if len(burst["targets"]) < 3 and burst["source"] is None:
+            continue
+        push(burst["first"], "%s%s命中%d人，合计%d伤害" % (
+            burst["source"] + "的" if burst["source"] else "",
+            burst["spell"], len(burst["targets"]), burst["damage"],
+        ))
+    if boss == "魔网观察者因塔苟斯":
+        for item in intagos_affinity_checks(rows, roster, start_sec, end_sec):
+            if not item["killed"]:
+                push(start_sec + item["death_offset"], "%s%s，首领单跳：%s" % (
+                    item["affinity"], item["result"], item["boss_hits"],
+                ))
+    push(end_sec, "战斗结束（%s）" % window.get("result", "灭团"))
+    events.sort(key=lambda item: item["offset"])
+    return events
+
+
+def build_error_summary(report, rows=None, roster=None):
     totals = Counter()
     details = defaultdict(Counter)
     findings = []
@@ -4700,8 +5081,10 @@ def build_error_summary(report):
             if curse["is_error"]:
                 add(curse["responsible"], encounter["boss"], curse["curse"] + "有断档", src=(encounter, curse))
 
+    # 骑士祝福只有王者、拯救、力量、智慧断档计错，其余祝福只展示。
     for item in report["buff_coverage"]["issues"]:
-        if not item["buff"].startswith("强效"):
+        item["counts_error"] = item["buff"] in ("强效王者祝福", "强效拯救祝福", "强效力量祝福", "强效智慧祝福")
+        if not item["counts_error"]:
             continue
         for responsible in item.get("responsible", []):
             add(responsible, "团队Buff", item["buff"] + "断档", src=(item,))
@@ -4739,7 +5122,8 @@ def build_error_summary(report):
     for affinity in intagos["affinities"]:
         for item in affinity["players"]:
             if item["is_error"]:
-                add(item["player"], "魔网观察者因塔苟斯", affinity["affinity"] + "零对应伤害", src=(affinity, item))
+                prefix = "" if affinity.get("attempt_result", "击杀") == "击杀" else "第%d次尝试" % affinity["attempt"]
+                add(item["player"], "魔网观察者因塔苟斯", prefix + affinity["affinity"] + "零对应伤害", src=(affinity, item))
     for item in intagos["preparation"]:
         for player in item["missing"]:
             add(player, "魔网观察者因塔苟斯", "开打缺少" + item["item"], src=(item,))
@@ -4750,6 +5134,8 @@ def build_error_summary(report):
     for item in anomalus["overloads"]:
         if item["counted_error"]:
             add(item["player"], "阿诺玛鲁斯", "奥术超载炸到大团", src=(item,))
+    for item in anomalus.get("overload_death_issues", []):
+        add(item["player"], "阿诺玛鲁斯", "被奥术超载炸死（伤害未超过4000）", src=(item,))
     for item in anomalus["continued_attack_issues"]:
         add(item["player"], "阿诺玛鲁斯", "中奥术超载超过允许时间仍打Boss", src=(item,))
     for item in anomalus["no_soak_issues"]:
@@ -4766,6 +5152,8 @@ def build_error_summary(report):
             add(item["sources"][0], "麦迪文的回响", "腐化传染他人", src=(item,))
     for item in medivh["corruption_dispels"]:
         add(item["dispeller"], "麦迪文的回响", "直接驱散麦迪文的腐化", src=(item,))
+    for item in medivh.get("infernal_issues", []):
+        add(item["player"], "麦迪文的回响", "非T攻击地狱火", src=(item,))
 
     king = bosses["国王（国际象棋）"]
     for check in king["opening_add_checks"]:
@@ -4828,6 +5216,8 @@ def build_error_summary(report):
 
     mephistroth = bosses["孟菲斯托斯"]
     for item in mephistroth["shackle_explosions"]:
+        if not item.get("counted_error", True):
+            continue
         add(
             item["trigger"],
             "孟菲斯托斯",
@@ -4875,7 +5265,9 @@ def build_error_summary(report):
             "involved": transformation.get("responsible", []),
             "error": cause["error"],
             "result": cause["result"],
-            "timeline": attempt.get("key_mechanic_timeline", []),
+            "timeline": (
+                rows is not None and _wipe_attempt_timeline(rows, roster, cause["boss"], cause["attempt"])
+            ) or attempt.get("key_mechanic_timeline", []),
             "deaths": attempt.get("deaths", []),
         })
     report["_findings"] = findings
@@ -4938,7 +5330,7 @@ def analyze(settings):
                 rows, boss_roster(roster, "魔网观察者因塔苟斯"), parsed_damage, dps["players"], roles
             ),
             "阿诺玛鲁斯": analyze_anomalus(rows, boss_roster(roster, "阿诺玛鲁斯"), parsed_damage, roles),
-            "麦迪文的回响": analyze_medivh(rows, boss_roster(roster, "麦迪文的回响")),
+            "麦迪文的回响": analyze_medivh(rows, boss_roster(roster, "麦迪文的回响"), parsed_damage, roles),
             "国王（国际象棋）": analyze_king(
                 rows, boss_roster(roster, "国王（国际象棋）"), parsed_damage, roles
             ),
@@ -4952,7 +5344,7 @@ def analyze(settings):
             ),
         },
     }
-    report["error_summary"] = build_error_summary(report)
+    report["error_summary"] = build_error_summary(report, rows, roster)
     findings = report.pop("_findings")
     issues = [dict(item) for item in NAME_ISSUES]
     for item in issues:

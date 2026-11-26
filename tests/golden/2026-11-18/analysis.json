@@ -16804,7 +16804,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 366.1,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16816,7 +16817,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 桑夫·塔斯达尔→破碎者鲁普图兰之间",
         "duration": 68.7,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16828,7 +16830,8 @@
         ],
         "interval": "因塔苟斯战内 至 因塔苟斯→阿诺玛鲁斯之间",
         "duration": 186.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16840,7 +16843,8 @@
         ],
         "interval": "国王战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 167.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16852,7 +16856,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 桑夫·塔斯达尔→破碎者鲁普图兰之间",
         "duration": 65.4,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16864,7 +16869,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 392.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "奥术智慧/奥术光辉",
@@ -16876,7 +16882,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 库鲁尔战内",
         "duration": 279.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效力量祝福",
@@ -16896,7 +16903,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 86.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效力量祝福",
@@ -16910,7 +16918,8 @@
         ],
         "interval": "麦迪文的回响战内",
         "duration": 64.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效力量祝福",
@@ -16924,7 +16933,8 @@
         ],
         "interval": "孟菲斯托斯战内",
         "duration": 65.0,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效力量祝福",
@@ -16940,7 +16950,8 @@
         ],
         "interval": "麦迪文的回响战内",
         "duration": 66.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效庇护祝福",
@@ -16957,7 +16968,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 国王→桑夫·塔斯达尔之间",
         "duration": 1421.8,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -16975,7 +16987,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 库鲁尔战内",
         "duration": 2022.8,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -16995,7 +17008,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 库鲁尔战内",
         "duration": 2022.8,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17011,7 +17025,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
         "duration": 2584.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17029,7 +17044,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
         "duration": 2584.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17045,7 +17061,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
         "duration": 2584.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17061,7 +17078,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
         "duration": 2584.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17076,7 +17094,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 国王→桑夫·塔斯达尔之间",
         "duration": 1421.8,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17091,7 +17110,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 孟菲斯托斯战内",
         "duration": 1158.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效庇护祝福",
@@ -17109,7 +17129,8 @@
         ],
         "interval": "纳尔穆恩→因塔苟斯之间 至 孟菲斯托斯战内",
         "duration": 2584.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "强效拯救祝福",
@@ -17123,7 +17144,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 71.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17137,7 +17159,8 @@
         ],
         "interval": "国王→桑夫·塔斯达尔之间",
         "duration": 159.9,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17151,7 +17174,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 库鲁尔→孟菲斯托斯之间",
         "duration": 776.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17166,7 +17190,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 229.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17180,7 +17205,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 破碎者鲁普图兰→库鲁尔之间",
         "duration": 171.7,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效拯救祝福",
@@ -17195,7 +17221,8 @@
         ],
         "interval": "桑夫·塔斯达尔→破碎者鲁普图兰之间 至 库鲁尔战内",
         "duration": 400.0,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17212,7 +17239,8 @@
         ],
         "interval": "麦迪文的回响战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 306.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17226,7 +17254,8 @@
         ],
         "interval": "麦迪文的回响战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 635.7,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17242,7 +17271,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 114.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17260,7 +17290,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 114.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17275,7 +17306,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 261.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17291,7 +17323,8 @@
         ],
         "interval": "因塔苟斯战内 至 阿诺玛鲁斯→麦迪文的回响之间",
         "duration": 448.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17307,7 +17340,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 114.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17321,7 +17355,8 @@
         ],
         "interval": "国王战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 167.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17336,7 +17371,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 桑夫·塔斯达尔→破碎者鲁普图兰之间",
         "duration": 68.7,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17350,7 +17386,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 库鲁尔战内",
         "duration": 279.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17367,7 +17404,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 114.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效智慧祝福",
@@ -17385,7 +17423,8 @@
         ],
         "interval": "麦迪文的回响战内 至 麦迪文的回响→国王之间",
         "duration": 114.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效王者祝福",
@@ -17399,7 +17438,8 @@
         ],
         "interval": "国王→桑夫·塔斯达尔之间",
         "duration": 90.4,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效王者祝福",
@@ -17414,7 +17454,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 229.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效王者祝福",
@@ -17428,7 +17469,8 @@
         ],
         "interval": "国王战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 106.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "强效王者祝福",
@@ -17442,7 +17484,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 破碎者鲁普图兰→库鲁尔之间",
         "duration": 168.4,
-        "until_end": false
+        "until_end": false,
+        "counts_error": true
       },
       {
         "buff": "精神（神圣之灵/精神祷言）",
@@ -17454,7 +17497,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 203.0,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "精神（神圣之灵/精神祷言）",
@@ -17466,7 +17510,8 @@
         ],
         "interval": "国王→桑夫·塔斯达尔之间 至 孟菲斯托斯战内",
         "duration": 1200.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "精神（神圣之灵/精神祷言）",
@@ -17478,7 +17523,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 229.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "精神（神圣之灵/精神祷言）",
@@ -17490,7 +17536,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 库鲁尔战内",
         "duration": 279.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "耐力（韧/坚韧祷言）",
@@ -17502,7 +17549,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 203.0,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "耐力（韧/坚韧祷言）",
@@ -17514,7 +17562,8 @@
         ],
         "interval": "国王战内 至 国王→桑夫·塔斯达尔之间",
         "duration": 87.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "耐力（韧/坚韧祷言）",
@@ -17526,7 +17575,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 229.5,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "耐力（韧/坚韧祷言）",
@@ -17538,7 +17588,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 库鲁尔战内",
         "duration": 279.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17550,7 +17601,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 204.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17562,7 +17614,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 桑夫·塔斯达尔→破碎者鲁普图兰之间",
         "duration": 68.7,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17574,7 +17627,8 @@
         ],
         "interval": "因塔苟斯战内 至 因塔苟斯→阿诺玛鲁斯之间",
         "duration": 186.3,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17586,7 +17640,8 @@
         ],
         "interval": "桑夫·塔斯达尔战内 至 桑夫·塔斯达尔→破碎者鲁普图兰之间",
         "duration": 65.4,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17598,7 +17653,8 @@
         ],
         "interval": "纳尔穆恩战内 至 纳尔穆恩→因塔苟斯之间",
         "duration": 233.2,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       },
       {
         "buff": "野性印记/野性赐福",
@@ -17610,7 +17666,8 @@
         ],
         "interval": "破碎者鲁普图兰战内 至 破碎者鲁普图兰→库鲁尔之间",
         "duration": 190.6,
-        "until_end": false
+        "until_end": false,
+        "counts_error": false
       }
     ]
   },
@@ -24112,7 +24169,9 @@
           "average_raid_damage": 0,
           "counted_error": false,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "妖肆贰",
@@ -24125,7 +24184,9 @@
           "average_raid_damage": 1051.7,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 50.833
+          "first_soak_offset": 50.833,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "Aayaa",
@@ -24138,7 +24199,9 @@
           "average_raid_damage": 1042.8,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 50.833
+          "first_soak_offset": 50.833,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "壹個獵人",
@@ -24151,7 +24214,9 @@
           "average_raid_damage": 1033.0,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 65.612
+          "first_soak_offset": 65.612,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "拂了一身还满",
@@ -24164,7 +24229,9 @@
           "average_raid_damage": 1555.8,
           "counted_error": true,
           "soaked": true,
-          "first_soak_offset": 76.521
+          "first_soak_offset": 76.521,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "蝶野雏",
@@ -24177,7 +24244,9 @@
           "average_raid_damage": 869.7,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 84.817
+          "first_soak_offset": 84.817,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "野生小耀西",
@@ -24190,7 +24259,9 @@
           "average_raid_damage": 925.7,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 92.206
+          "first_soak_offset": 92.206,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "大辫子啤酒",
@@ -24203,7 +24274,9 @@
           "average_raid_damage": 623.1,
           "counted_error": false,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "妖肆贰",
@@ -24216,7 +24289,9 @@
           "average_raid_damage": 923.0,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 99.19
+          "first_soak_offset": 99.19,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "名丨将",
@@ -24229,7 +24304,15 @@
           "average_raid_damage": 878.3,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 106.535
+          "first_soak_offset": 106.535,
+          "killed": [
+            {
+              "player": "靡不有初",
+              "damage": 933,
+              "lethal": false
+            }
+          ],
+          "killed_players": "靡不有初（933）"
         },
         {
           "player": "罗坊",
@@ -24242,7 +24325,9 @@
           "average_raid_damage": 2024.5,
           "counted_error": true,
           "soaked": true,
-          "first_soak_offset": 106.523
+          "first_soak_offset": 106.523,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "丨雷克萨斯丨",
@@ -24255,7 +24340,9 @@
           "average_raid_damage": 806.2,
           "counted_error": false,
           "soaked": true,
-          "first_soak_offset": 113.675
+          "first_soak_offset": 113.675,
+          "killed": [],
+          "killed_players": "无"
         },
         {
           "player": "Tbug",
@@ -24268,7 +24355,95 @@
           "average_raid_damage": 5115.0,
           "counted_error": true,
           "soaked": false,
-          "first_soak_offset": null
+          "first_soak_offset": null,
+          "killed": [
+            {
+              "player": "我爱大油桃",
+              "damage": 4175,
+              "lethal": true
+            },
+            {
+              "player": "湘江之畔",
+              "damage": 7325,
+              "lethal": true
+            },
+            {
+              "player": "拂了一身还满",
+              "damage": 8751,
+              "lethal": true
+            },
+            {
+              "player": "仲烛祈世",
+              "damage": 5336,
+              "lethal": true
+            },
+            {
+              "player": "洛珂珂",
+              "damage": 5127,
+              "lethal": true
+            },
+            {
+              "player": "靡不有初",
+              "damage": 3917,
+              "lethal": false
+            },
+            {
+              "player": "吊州女王",
+              "damage": 6159,
+              "lethal": true
+            },
+            {
+              "player": "鋼須",
+              "damage": 6838,
+              "lethal": true
+            },
+            {
+              "player": "凶甚",
+              "damage": 6810,
+              "lethal": true
+            },
+            {
+              "player": "丨小辫子丨",
+              "damage": 3952,
+              "lethal": false
+            },
+            {
+              "player": "不想吃鱼",
+              "damage": 8096,
+              "lethal": true
+            },
+            {
+              "player": "沐丶辰",
+              "damage": 5403,
+              "lethal": true
+            },
+            {
+              "player": "万恶的右手",
+              "damage": 8442,
+              "lethal": true
+            },
+            {
+              "player": "遁入幻境",
+              "damage": 5990,
+              "lethal": true
+            },
+            {
+              "player": "绍依古",
+              "damage": 5884,
+              "lethal": true
+            },
+            {
+              "player": "骨鼓图腾祭",
+              "damage": 8320,
+              "lethal": true
+            },
+            {
+              "player": "唯青",
+              "damage": 5540,
+              "lethal": true
+            }
+          ],
+          "killed_players": "我爱大油桃（4175）、湘江之畔（7325）、拂了一身还满（8751）、仲烛祈世（5336）、洛珂珂（5127）、靡不有初（3917）、吊州女王（6159）、鋼須（6838）、凶甚（6810）、丨小辫子丨（3952）、不想吃鱼（8096）、沐丶辰（5403）、万恶的右手（8442）、遁入幻境（5990）、绍依古（5884）、骨鼓图腾祭（8320）、唯青（5540）"
         },
         {
           "player": "Aayaa",
@@ -24282,6 +24457,94 @@
           "counted_error": false,
           "soaked": false,
           "first_soak_offset": null,
+          "killed": [
+            {
+              "player": "我爱大油桃",
+              "damage": 4175,
+              "lethal": true
+            },
+            {
+              "player": "湘江之畔",
+              "damage": 7325,
+              "lethal": true
+            },
+            {
+              "player": "拂了一身还满",
+              "damage": 8751,
+              "lethal": true
+            },
+            {
+              "player": "仲烛祈世",
+              "damage": 5336,
+              "lethal": true
+            },
+            {
+              "player": "洛珂珂",
+              "damage": 5127,
+              "lethal": true
+            },
+            {
+              "player": "靡不有初",
+              "damage": 3917,
+              "lethal": false
+            },
+            {
+              "player": "吊州女王",
+              "damage": 6159,
+              "lethal": true
+            },
+            {
+              "player": "鋼須",
+              "damage": 6838,
+              "lethal": true
+            },
+            {
+              "player": "凶甚",
+              "damage": 6810,
+              "lethal": true
+            },
+            {
+              "player": "丨小辫子丨",
+              "damage": 3952,
+              "lethal": false
+            },
+            {
+              "player": "不想吃鱼",
+              "damage": 8096,
+              "lethal": true
+            },
+            {
+              "player": "沐丶辰",
+              "damage": 5403,
+              "lethal": true
+            },
+            {
+              "player": "万恶的右手",
+              "damage": 8442,
+              "lethal": true
+            },
+            {
+              "player": "遁入幻境",
+              "damage": 5990,
+              "lethal": true
+            },
+            {
+              "player": "绍依古",
+              "damage": 5884,
+              "lethal": true
+            },
+            {
+              "player": "骨鼓图腾祭",
+              "damage": 8320,
+              "lethal": true
+            },
+            {
+              "player": "唯青",
+              "damage": 5540,
+              "lethal": true
+            }
+          ],
+          "killed_players": "我爱大油桃（4175）、湘江之畔（7325）、拂了一身还满（8751）、仲烛祈世（5336）、洛珂珂（5127）、靡不有初（3917）、吊州女王（6159）、鋼須（6838）、凶甚（6810）、丨小辫子丨（3952）、不想吃鱼（8096）、沐丶辰（5403）、万恶的右手（8442）、遁入幻境（5990）、绍依古（5884）、骨鼓图腾祭（8320）、唯青（5540）",
           "chained_to": "Tbug"
         },
         {
@@ -24296,6 +24559,94 @@
           "counted_error": false,
           "soaked": false,
           "first_soak_offset": null,
+          "killed": [
+            {
+              "player": "我爱大油桃",
+              "damage": 4175,
+              "lethal": true
+            },
+            {
+              "player": "湘江之畔",
+              "damage": 7325,
+              "lethal": true
+            },
+            {
+              "player": "拂了一身还满",
+              "damage": 8751,
+              "lethal": true
+            },
+            {
+              "player": "仲烛祈世",
+              "damage": 5336,
+              "lethal": true
+            },
+            {
+              "player": "洛珂珂",
+              "damage": 5127,
+              "lethal": true
+            },
+            {
+              "player": "靡不有初",
+              "damage": 3917,
+              "lethal": false
+            },
+            {
+              "player": "吊州女王",
+              "damage": 6159,
+              "lethal": true
+            },
+            {
+              "player": "鋼須",
+              "damage": 6838,
+              "lethal": true
+            },
+            {
+              "player": "凶甚",
+              "damage": 6810,
+              "lethal": true
+            },
+            {
+              "player": "丨小辫子丨",
+              "damage": 3952,
+              "lethal": false
+            },
+            {
+              "player": "不想吃鱼",
+              "damage": 8096,
+              "lethal": true
+            },
+            {
+              "player": "沐丶辰",
+              "damage": 5403,
+              "lethal": true
+            },
+            {
+              "player": "万恶的右手",
+              "damage": 8442,
+              "lethal": true
+            },
+            {
+              "player": "遁入幻境",
+              "damage": 5990,
+              "lethal": true
+            },
+            {
+              "player": "绍依古",
+              "damage": 5884,
+              "lethal": true
+            },
+            {
+              "player": "骨鼓图腾祭",
+              "damage": 8320,
+              "lethal": true
+            },
+            {
+              "player": "唯青",
+              "damage": 5540,
+              "lethal": true
+            }
+          ],
+          "killed_players": "我爱大油桃（4175）、湘江之畔（7325）、拂了一身还满（8751）、仲烛祈世（5336）、洛珂珂（5127）、靡不有初（3917）、吊州女王（6159）、鋼須（6838）、凶甚（6810）、丨小辫子丨（3952）、不想吃鱼（8096）、沐丶辰（5403）、万恶的右手（8442）、遁入幻境（5990）、绍依古（5884）、骨鼓图腾祭（8320）、唯青（5540）",
           "chained_to": "Tbug"
         },
         {
@@ -24310,7 +24661,115 @@
           "counted_error": false,
           "soaked": false,
           "first_soak_offset": null,
+          "killed": [
+            {
+              "player": "我爱大油桃",
+              "damage": 4175,
+              "lethal": true
+            },
+            {
+              "player": "湘江之畔",
+              "damage": 7325,
+              "lethal": true
+            },
+            {
+              "player": "拂了一身还满",
+              "damage": 8751,
+              "lethal": true
+            },
+            {
+              "player": "仲烛祈世",
+              "damage": 5336,
+              "lethal": true
+            },
+            {
+              "player": "洛珂珂",
+              "damage": 5127,
+              "lethal": true
+            },
+            {
+              "player": "靡不有初",
+              "damage": 3917,
+              "lethal": false
+            },
+            {
+              "player": "吊州女王",
+              "damage": 6159,
+              "lethal": true
+            },
+            {
+              "player": "鋼須",
+              "damage": 6838,
+              "lethal": true
+            },
+            {
+              "player": "凶甚",
+              "damage": 6810,
+              "lethal": true
+            },
+            {
+              "player": "丨小辫子丨",
+              "damage": 3952,
+              "lethal": false
+            },
+            {
+              "player": "不想吃鱼",
+              "damage": 8096,
+              "lethal": true
+            },
+            {
+              "player": "沐丶辰",
+              "damage": 5403,
+              "lethal": true
+            },
+            {
+              "player": "万恶的右手",
+              "damage": 8442,
+              "lethal": true
+            },
+            {
+              "player": "遁入幻境",
+              "damage": 5990,
+              "lethal": true
+            },
+            {
+              "player": "绍依古",
+              "damage": 5884,
+              "lethal": true
+            },
+            {
+              "player": "骨鼓图腾祭",
+              "damage": 8320,
+              "lethal": true
+            },
+            {
+              "player": "唯青",
+              "damage": 5540,
+              "lethal": true
+            }
+          ],
+          "killed_players": "我爱大油桃（4175）、湘江之畔（7325）、拂了一身还满（8751）、仲烛祈世（5336）、洛珂珂（5127）、靡不有初（3917）、吊州女王（6159）、鋼須（6838）、凶甚（6810）、丨小辫子丨（3952）、不想吃鱼（8096）、沐丶辰（5403）、万恶的右手（8442）、遁入幻境（5990）、绍依古（5884）、骨鼓图腾祭（8320）、唯青（5540）",
           "chained_to": "Tbug"
+        }
+      ],
+      "overload_death_issues": [
+        {
+          "player": "靡不有初",
+          "offset": 92.144,
+          "damage": 933,
+          "holders": "名丨将"
+        },
+        {
+          "player": "靡不有初",
+          "offset": 105.847,
+          "damage": 3917,
+          "holders": "Aayaa、Tbug、御剑乗风来、黑星盗"
+        },
+        {
+          "player": "丨小辫子丨",
+          "offset": 105.862,
+          "damage": 3952,
+          "holders": "Aayaa、Tbug、御剑乗风来、黑星盗"
         }
       ],
       "continued_attack_issues": [
@@ -24576,6 +25035,192 @@
       ],
       "corruption_transmissions": [],
       "corruption_dispels": [],
+      "infernal_issues": [
+        {
+          "player": "大辫子啤酒",
+          "first_offset": 22.129,
+          "hits": 64,
+          "damage": 36911,
+          "spells": [
+            [
+              "瞄准射击",
+              16
+            ],
+            [
+              "穿刺射击",
+              15
+            ],
+            [
+              "爆炸弹药",
+              10
+            ],
+            [
+              "剧毒弹药",
+              5
+            ],
+            [
+              "自动射击",
+              5
+            ],
+            [
+              "魔力弹药",
+              4
+            ],
+            [
+              "奥术射击",
+              3
+            ],
+            [
+              "额外射击",
+              2
+            ],
+            [
+              "稳固射击",
+              2
+            ],
+            [
+              "多重射击",
+              2
+            ]
+          ]
+        },
+        {
+          "player": "木易丶疯子",
+          "first_offset": 21.293,
+          "hits": 29,
+          "damage": 17707,
+          "spells": [
+            [
+              "火舌攻击",
+              13
+            ],
+            [
+              "顺劈斩",
+              8
+            ],
+            [
+              "旋风斩",
+              8
+            ]
+          ]
+        },
+        {
+          "player": "丨小辫子丨",
+          "first_offset": 26.289,
+          "hits": 36,
+          "damage": 17515,
+          "spells": [
+            [
+              "瞄准射击",
+              8
+            ],
+            [
+              "爆炸弹药",
+              8
+            ],
+            [
+              "穿刺射击",
+              8
+            ],
+            [
+              "多重射击",
+              5
+            ],
+            [
+              "魔力弹药",
+              3
+            ],
+            [
+              "剧毒弹药",
+              3
+            ],
+            [
+              "额外射击",
+              1
+            ]
+          ]
+        },
+        {
+          "player": "拂了一身还满",
+          "first_offset": 19.153,
+          "hits": 23,
+          "damage": 15388,
+          "spells": [
+            [
+              "火舌攻击",
+              10
+            ],
+            [
+              "旋风斩",
+              7
+            ],
+            [
+              "顺劈斩",
+              6
+            ]
+          ]
+        },
+        {
+          "player": "Tbug",
+          "first_offset": 28.794,
+          "hits": 17,
+          "damage": 10025,
+          "spells": [
+            [
+              "旋风斩",
+              7
+            ],
+            [
+              "火舌攻击",
+              7
+            ],
+            [
+              "偏移打击",
+              3
+            ]
+          ]
+        },
+        {
+          "player": "Aayaa",
+          "first_offset": 24.029,
+          "hits": 11,
+          "damage": 9942,
+          "spells": [
+            [
+              "旋风斩",
+              6
+            ],
+            [
+              "火舌攻击",
+              5
+            ]
+          ]
+        },
+        {
+          "player": "壹個獵人",
+          "first_offset": 27.715,
+          "hits": 48,
+          "damage": 8790,
+          "spells": [
+            [
+              "爆炸陷阱效果",
+              30
+            ],
+            [
+              "毒蛇钉刺",
+              14
+            ],
+            [
+              "切碎",
+              2
+            ],
+            [
+              "火舌攻击",
+              2
+            ]
+          ]
+        }
+      ],
       "corruption_attribution_limit": "每次无人持有腐化时出现的首名感染者视为Boss主动点名；下一次Boss点名前的新增感染者全部视为前一批感染者传播。普通日志不记录精确传播源，按同期腐化跳伤者列候选，多个候选时不强行唯一归因。"
     },
     "国王（国际象棋）": {
@@ -28375,6 +29020,60 @@
         ]
       },
       {
+        "player": "靡不有初",
+        "count": 20,
+        "details": [
+          {
+            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
+            "count": 5
+          },
+          {
+            "issue": "桑夫·塔斯达尔·失落暗影未转火",
+            "count": 4
+          },
+          {
+            "issue": "阿诺玛鲁斯·被奥术超载炸死（伤害未超过4000）",
+            "count": 2
+          },
+          {
+            "issue": "国王（国际象棋）·死于国王之怒",
+            "count": 1
+          },
+          {
+            "issue": "国王（国际象棋）·鲁莽诅咒有断档",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·鲁莽诅咒有断档",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少火炕",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·鲁莽诅咒有断档",
+            "count": 1
+          },
+          {
+            "issue": "破碎者鲁普图兰·鲁莽诅咒有断档",
+            "count": 1
+          },
+          {
+            "issue": "魔网观察者因塔苟斯·初始小怪未清先打Boss",
+            "count": 1
+          }
+        ]
+      },
+      {
         "player": "罗坊",
         "count": 18,
         "details": [
@@ -28412,56 +29111,6 @@
           },
           {
             "issue": "麦迪文的回响·语言诅咒有断档",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "player": "靡不有初",
-        "count": 18,
-        "details": [
-          {
-            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
-            "count": 5
-          },
-          {
-            "issue": "桑夫·塔斯达尔·失落暗影未转火",
-            "count": 4
-          },
-          {
-            "issue": "国王（国际象棋）·死于国王之怒",
-            "count": 1
-          },
-          {
-            "issue": "国王（国际象棋）·鲁莽诅咒有断档",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·鲁莽诅咒有断档",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少火炕",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·鲁莽诅咒有断档",
-            "count": 1
-          },
-          {
-            "issue": "破碎者鲁普图兰·鲁莽诅咒有断档",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·初始小怪未清先打Boss",
             "count": 1
           }
         ]
@@ -28555,38 +29204,8 @@
         ]
       },
       {
-        "player": "我爱大油桃",
-        "count": 15,
-        "details": [
-          {
-            "issue": "团队Buff·强效庇护祝福断档",
-            "count": 10
-          },
-          {
-            "issue": "国王（国际象棋）·死于国王之怒",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·梦境精华药剂到期未及时补",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "壹個獵人",
-        "count": 14,
+        "count": 15,
         "details": [
           {
             "issue": "消耗品·梦境火酒药剂到期未及时补",
@@ -28638,6 +29257,10 @@
           },
           {
             "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
             "count": 1
           }
         ]
@@ -28700,6 +29323,44 @@
           },
           {
             "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "丨小辫子丨",
+        "count": 12,
+        "details": [
+          {
+            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
+            "count": 5
+          },
+          {
+            "issue": "国王（国际象棋）·死于国王之怒",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·被奥术超载炸死（伤害未超过4000）",
+            "count": 1
+          },
+          {
+            "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
             "count": 1
           }
         ]
@@ -28827,6 +29488,56 @@
         ]
       },
       {
+        "player": "木易丶疯子",
+        "count": 11,
+        "details": [
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·第一阶段非T攻击地狱火",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·大怪成功变身",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
+            "count": 1
+          }
+        ]
+      },
+      {
         "player": "绍依古",
         "count": 11,
         "details": [
@@ -28921,36 +29632,6 @@
         ]
       },
       {
-        "player": "丨小辫子丨",
-        "count": 10,
-        "details": [
-          {
-            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
-            "count": 5
-          },
-          {
-            "issue": "国王（国际象棋）·死于国王之怒",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
-            "count": 1
-          },
-          {
-            "issue": "魔网观察者因塔苟斯·水晶亲和零对应伤害",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "丨雷克萨斯丨",
         "count": 10,
         "details": [
@@ -28993,31 +29674,19 @@
         ]
       },
       {
-        "player": "木易丶疯子",
+        "player": "拂了一身还满",
         "count": 10,
         "details": [
+          {
+            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "count": 1
+          },
           {
             "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
             "count": 1
           },
           {
-            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
-            "count": 1
-          },
-          {
             "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·开打未保持屠魔药剂",
             "count": 1
           },
           {
@@ -29029,11 +29698,23 @@
             "count": 1
           },
           {
-            "issue": "桑夫·塔斯达尔·开打未保持屠魔药剂",
+            "issue": "消耗品·奥法巨人药剂到期未及时补",
             "count": 1
           },
           {
-            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "issue": "消耗品·翡翠猫鼬药剂到期未及时补",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
             "count": 1
           }
         ]
@@ -29103,94 +29784,8 @@
         ]
       },
       {
-        "player": "拂了一身还满",
-        "count": 9,
-        "details": [
-          {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-            "count": 1
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·第一阶段非T攻击地狱火",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·奥法巨人药剂到期未及时补",
-            "count": 1
-          },
-          {
-            "issue": "消耗品·翡翠猫鼬药剂到期未及时补",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "player": "洛珂珂",
-        "count": 9,
-        "details": [
-          {
-            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
-            "count": 5
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·解除大领主印记炸到人",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "player": "仲烛祈世",
-        "count": 8,
-        "details": [
-          {
-            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
-            "count": 6
-          },
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          }
-        ]
-      },
-      {
         "player": "大辫子啤酒",
-        "count": 8,
+        "count": 9,
         "details": [
           {
             "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
@@ -29222,6 +29817,88 @@
           },
           {
             "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "洛珂珂",
+        "count": 9,
+        "details": [
+          {
+            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
+            "count": 5
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·猫头鹰低血量继续攻击",
+            "count": 1
+          },
+          {
+            "issue": "库鲁尔·解除大领主印记炸到人",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "Aayaa",
+        "count": 8,
+        "details": [
+          {
+            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
+            "count": 2
+          },
+          {
+            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·大怪成功变身",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "仲烛祈世",
+        "count": 8,
+        "details": [
+          {
+            "issue": "孟菲斯托斯·噩梦爬行者吸蓝前未转火",
+            "count": 6
+          },
+          {
+            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
+            "count": 1
+          },
+          {
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
             "count": 1
           }
         ]
@@ -29279,31 +29956,35 @@
         ]
       },
       {
-        "player": "Aayaa",
+        "player": "Tbug",
         "count": 7,
         "details": [
-          {
-            "issue": "阿诺玛鲁斯·中奥术超载超过允许时间仍打Boss",
-            "count": 2
-          },
-          {
-            "issue": "国王（国际象棋）·第1次未攻击损坏的战车",
-            "count": 1
-          },
           {
             "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
             "count": 1
           },
           {
-            "issue": "孟菲斯托斯·开打未保持屠魔药剂",
+            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
             "count": 1
           },
           {
-            "issue": "守护者纳尔穆恩·开打未保持屠魔药剂",
+            "issue": "库鲁尔·第一阶段非T攻击地狱火",
             "count": 1
           },
           {
             "issue": "桑夫·塔斯达尔·大怪成功变身",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
+            "count": 1
+          },
+          {
+            "issue": "麦迪文的回响·非T攻击地狱火",
             "count": 1
           }
         ]
@@ -29338,36 +30019,6 @@
           },
           {
             "issue": "麦迪文的回响·冰霜新星打断过早",
-            "count": 1
-          }
-        ]
-      },
-      {
-        "player": "Tbug",
-        "count": 6,
-        "details": [
-          {
-            "issue": "孟菲斯托斯·55%停手阶段仍攻击Boss",
-            "count": 1
-          },
-          {
-            "issue": "守护者纳尔穆恩·开打缺少冰冻符文",
-            "count": 1
-          },
-          {
-            "issue": "库鲁尔·第一阶段非T攻击地狱火",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·大怪成功变身",
-            "count": 1
-          },
-          {
-            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
-            "count": 1
-          },
-          {
-            "issue": "阿诺玛鲁斯·奥术超载炸到大团",
             "count": 1
           }
         ]
@@ -29420,6 +30071,32 @@
           },
           {
             "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "player": "我爱大油桃",
+        "count": 5,
+        "details": [
+          {
+            "issue": "国王（国际象棋）·死于国王之怒",
+            "count": 1
+          },
+          {
+            "issue": "桑夫·塔斯达尔·裂隙纠缠期间未打德莱尼虚无行者",
+            "count": 1
+          },
+          {
+            "issue": "消耗品·梦境精华药剂到期未及时补",
+            "count": 1
+          },
+          {
+            "issue": "阿诺玛鲁斯·开打未吃奥术防护",
+            "count": 1
+          },
+          {
+            "issue": "魔网观察者因塔苟斯·开打缺少冰抗",
             "count": 1
           }
         ]
@@ -29618,120 +30295,112 @@
         "result": "裂隙元素于开怪后+2:29、+2:38、+2:50连续三次奥术爆炸，直接造成30人死亡；其余9人随后被Boss或残余小怪收掉。第二次击杀中裂隙行者均在读条完成前死亡，没有生成裂隙元素。",
         "timeline": [
           {
-            "offset": 1.421,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 52.1,
+            "event": "桑夫·塔斯达尔施放仇恨溢出"
           },
           {
-            "offset": 5.922,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 71.4,
+            "event": "失落暗影的德莱尼人死亡2个"
           },
           {
-            "offset": 7.889,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 72.8,
+            "event": "德莱尼裂隙行者施放形成裂隙元素"
           },
           {
-            "offset": 14.413,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 75.2,
+            "event": "德莱尼裂隙行者死亡3个"
           },
           {
-            "offset": 20.984,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 79.0,
+            "event": "德莱尼裂隙行者施放形成裂隙元素"
           },
           {
-            "offset": 21.172,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 91.6,
+            "event": "死亡1人（德莱尼人 (桑夫·塔斯达尔)×1）：野生小耀西"
           },
           {
-            "offset": 27.515,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 92.0,
+            "event": "失落暗影的德莱尼人死亡"
           },
           {
-            "offset": 34.031,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 105.8,
+            "event": "失落暗影的德莱尼人死亡3个"
           },
           {
-            "offset": 36.437,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 116.3,
+            "event": "桑夫·塔斯达尔施放仇恨溢出"
           },
           {
-            "offset": 40.765,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 123.4,
+            "event": "桑夫·塔斯达尔施放裂隙回馈"
           },
           {
-            "offset": 47.296,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 124.9,
+            "event": "裂隙回馈命中37人，合计4800伤害"
           },
           {
-            "offset": 52.077,
-            "event": "桑夫·塔斯达尔开始施放仇恨溢出。"
+            "offset": 132.7,
+            "event": "德莱尼裂隙行者施放形成裂隙元素"
           },
           {
-            "offset": 52.166,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 136.5,
+            "event": "德莱尼裂隙行者施放形成裂隙元素"
           },
           {
-            "offset": 111.142,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 138.7,
+            "event": "德莱尼裂隙行者死亡3个"
           },
           {
-            "offset": 111.259,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 149.1,
+            "event": "死亡6人（奥术爆炸×6）：心醉、仲烛祈世、Pampas、蝶野雏、妖肆贰、鋼須"
           },
           {
-            "offset": 116.288,
-            "event": "桑夫·塔斯达尔开始施放仇恨溢出。"
+            "offset": 149.1,
+            "event": "奥术爆炸命中37人，合计215097伤害"
           },
           {
-            "offset": 122.397,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 151.8,
+            "event": "死亡2人（虚空之箭×1、德莱尼人×1）：木易丶疯子、沐丶辰"
           },
           {
-            "offset": 123.383,
-            "event": "桑夫·塔斯达尔开始施放裂隙回馈。"
+            "offset": 158.4,
+            "event": "死亡20人（奥术爆炸×20）：拂了一身还满、Aayaa、丨雷克萨斯丨、绍依古、洛珂珂、靡不有初、遁入幻境、凶甚、Tbug、进击的喵叽、吊州女王、骨鼓图腾祭、唯青、万恶的右手、湘江之畔、罗坊、丨小辫子丨、大辫子啤酒、炼洗之命、不想吃鱼"
           },
           {
-            "offset": 126.358,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 158.4,
+            "event": "奥术爆炸命中26人，合计128231伤害"
           },
           {
-            "offset": 129.081,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 160.8,
+            "event": "死亡3人（近战×2）：荫羊藿肉苁蓉、一路向西丶、名丨将"
           },
           {
-            "offset": 135.671,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 164.5,
+            "event": "死亡2人：壹個獵人、御剑乗风来"
           },
           {
-            "offset": 141.609,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 166.7,
+            "event": "死亡1人（德莱尼人×1）：我爱大油桃"
           },
           {
-            "offset": 142.187,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 168.9,
+            "event": "死亡3人（德莱尼人×1、奥术爆炸×1）：旺仔丶牛奶糖、小卓大美丽、晓艸"
           },
           {
-            "offset": 148.673,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 169.8,
+            "event": "桑夫·塔斯达尔施放裂隙回馈"
           },
           {
-            "offset": 155.203,
-            "event": "裂隙纠缠一轮开始"
+            "offset": 171.2,
+            "event": "失落暗影的德莱尼人死亡3个"
           },
           {
-            "offset": 157.266,
-            "event": "裂隙诅咒一轮开始"
+            "offset": 174.8,
+            "event": "死亡1人（德莱尼人×1）：黑星盗"
           },
           {
-            "offset": 161.673,
-            "event": "裂隙纠缠一轮开始"
-          },
-          {
-            "offset": 168.506,
-            "event": "裂隙纠缠一轮开始"
-          },
-          {
-            "offset": 169.765,
-            "event": "桑夫·塔斯达尔开始施放裂隙回馈。"
+            "offset": 174.8,
+            "event": "战斗结束（灭团）"
           }
         ],
         "deaths": [

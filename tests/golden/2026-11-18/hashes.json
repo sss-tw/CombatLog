@@ -4,40 +4,40 @@
   "files": {
     "analysis.json": {
       "path": "C:\\Users\\sekilai\\Documents\\CombatLog\\tests\\golden\\2026-11-18\\analysis.json",
-      "bytes": 740904,
-      "sha256": "86ba046d9019acbc8bcbb863fa870e6b309b3d30dfcdaad1bff529b6ca1b2510"
+      "bytes": 759799,
+      "sha256": "eade1f716bf65ac6e17eb25a7c2cc98e480d3ecf1c3f81e731225c7813ec832c"
     },
     "display.json": {
       "path": "C:\\Users\\sekilai\\Documents\\CombatLog\\tests\\golden\\2026-11-18\\display.json",
-      "bytes": 182913,
-      "sha256": "520fbf8c68e70fa8da409f7734bdc96ea9d58fdfd9e32117d568d09d3c53c135"
+      "bytes": 189668,
+      "sha256": "8b08b14d97311804e85764811c1cb4c610ea8fb91092945b136d074c2a978344"
     },
     "metrics.json": {
       "path": "C:\\Users\\sekilai\\Documents\\CombatLog\\tests\\golden\\2026-11-18\\metrics.json",
-      "bytes": 53764,
-      "sha256": "746271bb064b48c033b89dcb6ff0315238dd419151e9411702d319b490bb8e8e"
+      "bytes": 55238,
+      "sha256": "ef57a479928344e62eaedbcf82d8ee8e0dcf2abd3c5176c258ba7faf07ef3de3"
     },
     "page.html": {
       "path": "C:\\Users\\sekilai\\Documents\\CombatLog\\tests\\golden\\2026-11-18\\page.html",
       "bytes": 694,
-      "sha256": "6cfc2907ebf727bce9e9dccfa4dfab93475ae7240362ec10054fa4070214b362"
+      "sha256": "f3073176fbbdbd459a954423d2dc5ef5f77598672720f8869cc5d012dfd48fff"
     }
   },
   "canonical_sha256": {
-    "analysis": "57d56413b835dfc756f78cc744fdf0c404919cec964a13c9cfbccf9678d80627",
-    "display": "eaab94a602c385f76983c03016f37b25fbcabf031c3bc9cb6b198308256fc352",
-    "metrics": "c787cb00d163fd056ffe940906535701efb70c3fc5a4ce5b22ef9582b2a66da2"
+    "analysis": "01848c7723bb50b6eb51daa8342c73c104e00715e2ec36774bb609f40a4809c0",
+    "display": "69ce83e93dd9fdcfe7462115a6febe1970251619ea288a62ba0df3fc2a8d74d8",
+    "metrics": "7eab61d0a9e9321c35ed77abffc87d9c1e5f8f83b1cd663f48311df74af1fe8e"
   },
   "external_inputs": {
     "combat_log": {
       "path": "C:\\wow-turtle\\Logs\\WoWCombatLog.txt",
-      "bytes": 81757629,
-      "sha256": "4657c3b10f48ee127a2bc235e4b51ed5305cd744b9440b1b6650d1c57e59ade3"
+      "bytes": 196367674,
+      "sha256": "ae5dbaf7ee51f5a22367dce2a47ff3cd98d640358da0f76acb51768d397d2c3a"
     },
     "raw_combat_log": {
       "path": "C:\\wow-turtle\\Logs\\WoWRawCombatLog.txt",
-      "bytes": 214482109,
-      "sha256": "43b299b84d5df0f883a1840799d6aed07e82bc09416a420d7e8e473dd1cbd06b"
+      "bytes": 337144119,
+      "sha256": "77818100a3c9b7262a94cbd4eb5f95f3aed3f21c340aca52b6bd8cbcfdfd8a11"
     },
     "custom_data": {
       "path": "C:\\wow-turtle\\CustomData\\VanillaWCL_Basin_of_Stars_旧德二世_backup_1795139175.txt",

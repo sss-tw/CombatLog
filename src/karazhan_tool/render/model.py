@@ -628,7 +628,8 @@ def build_model(report, notes=None):
             callout(
                 "补Buff及时性",
                 "不依赖队伍推断，直接按每名玩家的增益失效到重新获得计算；纯脱战时间不累计，"
-                "战斗内缺失超过60秒才列出。没有八队分组时按玩家展示，不强行合并为小队。",
+                "战斗内缺失超过60秒才列出。没有八队分组时按玩家展示，不强行合并为小队。"
+                "骑士祝福只有王者、拯救、力量、智慧断档计错，光明等其余祝福只展示。",
             ),
             callout(
                 "风怒覆盖仍需分组",
@@ -648,6 +649,7 @@ def build_model(report, notes=None):
                 ("buff", "增益"), ("mode", "判定方式"), ("unit", "玩家/队伍"),
                 ("affected", "受影响者"), ("interval", "缺失阶段"),
                 ("duration", "战斗内缺失（秒）"), ("until_end", "持续至结束"),
+                ("counts_error", "是否计错"),
             ]),
         ],
     })
@@ -790,6 +792,7 @@ def build_model(report, notes=None):
         for player in affinity.get("players", []):
             row = dict(player)
             row.update({
+                "attempt": "第%s次（%s）" % (affinity.get("attempt", 1), affinity.get("attempt_result", "击杀")),
                 "affinity": affinity.get("affinity"),
                 "school": affinity.get("allowed_school"),
                 "window": "%s–%s" % (
@@ -806,7 +809,9 @@ def build_model(report, notes=None):
                 "亲和对应属性",
                 "红色=火焰、绿色=自然、水晶=物理、魔力=奥术、黑色=暗影、蓝色=冰霜。"
                 "全部亲和及开打冰抗检查均排除坦克；火焰和冰霜不统计萨满，自然仍统计；"
-                "若直接击杀首领或亲和爆炸后仍击杀，零伤害不计错。",
+                "若直接击杀首领或亲和爆炸后仍击杀，零伤害不计错。"
+                "灭团尝试的亲和同样检查；团灭时亲和仍在、或亲和出现前已死亡的人不计错。"
+                "亲和消失后15秒内首领单跳达到6000，视为亲和没打到0血（未打掉）。",
             ),
         ],
         "tables": [
@@ -815,9 +820,14 @@ def build_model(report, notes=None):
                 ("hits", "命中"), ("damage", "伤害"), (lambda item: spell_summary(item.get("spells")), "技能"),
             ]),
             selected_table("2. 亲和对应属性伤害", affinity_rows, [
-                ("affinity", "亲和"), ("school", "只计属性"), ("window", "存在窗口"),
+                ("attempt", "尝试"), ("affinity", "亲和"), ("school", "只计属性"), ("window", "存在窗口"),
                 ("player", "玩家"), ("class", "职业"), ("hits", "命中"),
                 ("damage", "有效伤害"), ("result", "结论"),
+            ]),
+            selected_table("2.1 各次尝试亲和是否打掉", intagos.get("affinity_attempts", []), [
+                ("attempt", "尝试"), ("attempt_result", "结果"), ("affinity", "亲和"),
+                ("death_offset", "消失时间"), ("last_hit_gap", "最后一击距消失（秒）"),
+                ("boss_hits", "消失后首领单跳（之前→之后）"), ("result", "结论"),
             ]),
             selected_table("3. 魔鳞诅咒长时间未解除", intagos.get("curse_results", []), [
                 ("target", "玩家"), ("applied_offset", "中诅咒"), ("removed_offset", "解除"),
@@ -863,9 +873,15 @@ def build_model(report, notes=None):
                 ("player", "点名"), ("applied_offset", "获得"),
                 ("duration", "持续"), ("raid_hit_count", "炸到人数"),
                 ("raid_damage", "全团伤害"), ("average_raid_damage", "人均伤害"),
+                (lambda item: bool(item.get("killed")), "是否炸死人"),
+                ("killed_players", "炸死（受到伤害）"),
                 ("counted_error", "是否计错"),
                 (lambda item: "连锁，归" + item["chained_to"] if item.get("chained_to") else item["trigger"], "归因"),
                 ("soaked", "是否踩圈"),
+            ]),
+            selected_table("4.1 被奥术超载炸死且伤害未超过4000", anom.get("overload_death_issues", []), [
+                ("player", "玩家"), ("offset", "时间"), ("damage", "受到伤害"),
+                ("holders", "爆炸来源（持有者）"),
             ]),
             selected_table("5. 中超载超过允许时间仍攻击首领", anom.get("continued_attack_issues", []), [
                 ("player", "玩家"), ("target_order", "点名顺序"), ("applied_offset", "点名时间"),
@@ -923,6 +939,10 @@ def build_model(report, notes=None):
             ]),
             selected_table("6. 腐化被直接驱散", medivh.get("corruption_dispels", []), [
                 ("offset", "时间"), ("target", "目标"), ("dispeller", "驱散者"),
+            ]),
+            selected_table("7. 非坦克攻击势不可挡的地狱火", medivh.get("infernal_issues", []), [
+                ("player", "玩家"), ("first_offset", "首次攻击"), ("hits", "命中次数"),
+                ("damage", "伤害"), (lambda item: spell_summary(item.get("spells")), "技能"),
             ]),
         ],
     })
@@ -1146,8 +1166,10 @@ def build_model(report, notes=None):
                 ("duration", "持续"), ("resolution", "结算"),
             ]),
             selected_table("3. 军团镣铐异常挣脱", meph.get("shackle_explosions", []), [
-                ("trigger", "触发者"), ("offset", "时间"),
-                ("hit_players", "炸到人数"), ("players", "受伤人员"),
+                ("attempt", "尝试"), ("trigger", "触发者"), ("offset", "时间"),
+                ("hits", "炸到人数"), ("damage", "伤害"),
+                (lambda item: "连锁，归%s" % item["chained_to"] if item.get("chained_to") else "本人", "归因"),
+                ("players", "受伤人员"),
             ]),
             selected_table("4. 噩梦爬行者吸蓝前未转火", crawler_errors, [
                 ("wave", "波次"), ("spawn_offset", "生成"),
